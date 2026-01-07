@@ -27,6 +27,17 @@ export interface ContactInfo {
   location: string;
 }
 
+export interface AboutInfo {
+  name: string,
+  age: number,
+  title: string,
+  subtitle: string,
+  about: string,
+  bio: string,
+  availability: string,
+  fn: string,
+}
+
 // Services based on your CV
 export const services: Service[] = [
   {
@@ -127,14 +138,19 @@ export const contactInfo: ContactInfo = {
 };
 
 // About information
-export const about = {
-  name: "Santiago Orduño Bennett",
-  age: 25,
-  title: "Product & Web Designer",
-  subtitle: "Product Designer specialized in UX/UI and Web Development",
-  bio: "Full-stack web designer specialized in commercial landing pages, UX/UI, and frontend development. Technical services: automation with n8n, API integration, VPS server configuration, and database management. I combine impactful design with robust technical implementation. Master's student in AI (Tec de Monterrey).",
-  availability: "Available for freelance or part-time opportunities"
-};
+export const about: AboutInfo[] = [
+  {
+    name: "Santiago Orduño Bennett",
+    age: 25,
+    title: "Product & Web Designer",
+    subtitle: "Product Designer specialized in UX/UI and Web Development",
+    about: `I help brands create impactful digital
+    experiences through UX/UI design, web development, and AI-enhanced visual content.`,
+    bio: "Full-stack web designer specialized in commercial landing pages, UX/UI, and frontend development. Technical services: automation with n8n, API integration, VPS server configuration, and database management. I combine impactful design with robust technical implementation. Master's student in AI (Tec de Monterrey).",
+    availability: "Available for freelance or part-time opportunities",
+    fn: "Santiago"
+  }
+];
 
 // Skills
 export const hardSkills: string[] = [

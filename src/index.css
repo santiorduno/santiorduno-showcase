@@ -116,7 +116,7 @@ body {
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
 }
 @utility banner-text-responsive {
-  @apply text-[68px] sm:text-[118px] md:text-[126px] lg:text-[152px] leading-9 sm:leading-16 lg:leading-20;
+  @apply text-[62px] sm:text-[118px] md:text-[126px] lg:text-[152px] leading-[68px] sm:leading-[118px] md:leading-[126px] lg:leading-[152px];
 }
 @utility value-text-responsive {
   @apply text-2xl md:text-[26px] lg:text-[32px];
