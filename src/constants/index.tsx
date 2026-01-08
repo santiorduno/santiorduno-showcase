@@ -145,7 +145,7 @@ export const about: AboutInfo[] = [
     title: "Product & Web Designer",
     subtitle: "Product Designer specialized in UX/UI and Web Development",
     about: `I help brands create impactful digital
-    experiences through UX/UI design, web development, and AI-enhanced visual content.`,
+    experiences through UX/UI design, web development,and AI-enhanced visual content.`,
     bio: "Full-stack web designer specialized in commercial landing pages, UX/UI, and frontend development. Technical services: automation with n8n, API integration, VPS server configuration, and database management. I combine impactful design with robust technical implementation. Master's student in AI (Tec de Monterrey).",
     availability: "Available for freelance or part-time opportunities",
     fn: "Santiago"
