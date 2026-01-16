@@ -1,7 +1,11 @@
+
 export interface Service {
   id: number;
   title: string;
   description: string;
+  items?: {
+    title: string;
+  }[];
   icon?: string; 
 }
 
@@ -43,12 +47,21 @@ export const services: Service[] = [
   {
     id: 1,
     title: "UX/UI Design",
-    description: "Advanced UX/UI design and interactive prototyping in Figma, ensuring intuitive and engaging user journeys for web and product interfaces."
+    description: "Advanced UX/UI design and interactive prototyping in Figma, ensuring intuitive and engaging user journeys for web and product interfaces.",
+    items: [
+      {title: "UX/UI Design"},
+      {title: "UX/UI Design"},
+      {title: "UX/UI Design"},
+      {title: "UX/UI Design"},
+    ]
   },
   {
     id: 2,
     title: "Web Development",
-    description: "Full-stack web development specialized in commercial landing pages, frontend implementation, and conversion-optimized design using modern frameworks."
+    description: "Full-stack web development specialized in commercial landing pages, frontend implementation, and conversion-optimized design using modern frameworks.",
+    items: [
+      {title: "UX/UI Design"},
+    ]
   },
   {
     id: 3,
@@ -144,8 +157,11 @@ export const about: AboutInfo[] = [
     age: 25,
     title: "Product & Web Designer",
     subtitle: "Product Designer specialized in UX/UI and Web Development",
-    about: `I help brands create impactful digital
-    experiences through UX/UI design, web development,and AI-enhanced visual content.`,
+    about:
+    `I help brands create impactful digital
+    experiences through UX/UI design,
+    web development,and AI-enhanced visual content.
+    `,
     bio: "Full-stack web designer specialized in commercial landing pages, UX/UI, and frontend development. Technical services: automation with n8n, API integration, VPS server configuration, and database management. I combine impactful design with robust technical implementation. Master's student in AI (Tec de Monterrey).",
     availability: "Available for freelance or part-time opportunities",
     fn: "Santiago"

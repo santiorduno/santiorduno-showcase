@@ -1,5 +1,4 @@
 import { AnimatedTextLines } from "../components/AnimatedTextLines";
-import { about } from "../constants";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -54,7 +53,7 @@ const AnimatedHeaderSection = ({subTitle, title, text, textColor, withScrollTrig
             </div>
         </div>
 
-        <div className={`realtive px-10 ${textColor}`}>
+        <div className={`realtive px-4 ${textColor}`}>
             <div className="absolute inset-x-0 border-t-2" />
             <div className="py-12 sm:py-16 text-end">
                 <AnimatedTextLines

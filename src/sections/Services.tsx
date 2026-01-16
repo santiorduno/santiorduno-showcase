@@ -38,7 +38,7 @@ const Services = () =>{
                 <div
                     key={index}
                     ref={(el) => { if (el) serviceRefs.current[index] = el; }}
-                    className="sticky px-10 pt-6 pb-12 text-white bg-black border-t-2 border-white/30"
+                    className="top-0 sticky px-10 pt-6 pb-12 text-white bg-black border-t-2 border-white/30"
                     style={isDesktop?{top: `calc(10vh + ${index * 5}em)`, marginBottom: `${(services.length - index -1)*5}rem`,}:{ top:0 }}
                     >
                         <div className="flex items-center justify-between gap-4 font-light">
