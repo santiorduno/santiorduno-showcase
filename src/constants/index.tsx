@@ -40,48 +40,75 @@ export interface AboutInfo {
   bio: string,
   availability: string,
   fn: string,
+  softSkills: string
 }
 
-// Services based on your CV
 export const services: Service[] = [
   {
     id: 1,
-    title: "UX/UI Design",
-    description: "Advanced UX/UI design and interactive prototyping in Figma, ensuring intuitive and engaging user journeys for web and product interfaces.",
+    title: "Product Design",
+    description: "Advanced UX/UI design and interactive prototyping in Figma, ensuring intuitive and engaging user journeys for web and product interfaces[cite: 7].",
     items: [
-      {title: "UX/UI Design"},
-      {title: "UX/UI Design"},
-      {title: "UX/UI Design"},
-      {title: "UX/UI Design"},
+      {title: "Interactive Prototyping"},
+      {title: "User Research & Testing"},
+      {title: "Information Architecture"},
+      {title: "Design Systems (Figma)"},
     ]
   },
   {
     id: 2,
     title: "Web Development",
-    description: "Full-stack web development specialized in commercial landing pages, frontend implementation, and conversion-optimized design using modern frameworks.",
+    description: "Full-stack web development specialized in commercial landing pages, frontend implementation, and conversion-optimized design using modern frameworks[cite: 10, 22].",
     items: [
-      {title: "UX/UI Design"},
+      {title: "React & Astro Development"},
+      {title: "Responsive Web Design"},
+      {title: "Performance Optimization"},
+      {title: "E-commerce Solutions"},
     ]
   },
   {
     id: 3,
     title: "Visual Content & AI",
-    description: "Visual content development enhanced by AI tools (Firefly, Midjourney, ComfyUI). Expert in Illustrator, Photoshop, Premiere Pro, After Effects and Blender."
+    description: "Visual content development enhanced by AI tools (Midjourney, ComfyUI). Expert in Adobe Creative Suite (Photoshop, Illustrator) and visual AI integration.",
+    items: [
+      {title: "Generative AI Workflows"},
+      {title: "Vector Illustration"},
+      {title: "Digital Asset Creation"},
+      {title: "AI-Enhanced Visuals"},
+    ]
   },
   {
     id: 4,
-    title: "Motion Graphics",
-    description: "Creation of impactful digital content for social media, advertising campaigns, and animation with strong skills in video editing and motion design."
+    title: "Technical Integration",
+    description: "Automation with Python and n8n, API integration, and technical implementation of designs using various rendering methods[cite: 11, 23].",
+    items: [
+      {title: "Workflow Automation"},
+      {title: "API & Data Integration"},
+      {title: "Python Scripting"},
+      {title: "SSR/CSR Implementation"},
+    ]
   },
   {
     id: 5,
-    title: "Technical Integration",
-    description: "Automation with n8n, API integration, VPS server configuration, and database management. Python programming for logic, automation, and data processing."
+    title: "3D Design & Motion Graphics",
+    description: "Creation of impactful digital content for social media and advertising campaigns, with focus on performance and engagement[cite: 32].",
+    items: [
+      {title: "3D Modeling & Rendering"},
+      {title: "Ad Campaign Design"},
+      {title: "Comertial Design"},
+      {title: "Video Editing"},
+    ]
   },
   {
     id: 6,
-    title: "Data Analysis",
-    description: "Fundamental knowledge in data analysis and visualization with Excel and Python. Certified in Data Science and Data Analysis practices."
+    title: "Learning Data Analysis",
+    description: "Data analysis and visualization with Excel, Tableau, and Python. Certified in IBM Enterprise Data Science[cite: 11, 51].",
+    items: [
+      {title: "Data Visualization"},
+      {title: "User Analytics"},
+      {title: "Business Intelligence"},
+      {title: "Python for Data Science"},
+    ]
   }
 ];
 
@@ -164,7 +191,8 @@ export const about: AboutInfo[] = [
     `,
     bio: "Full-stack web designer specialized in commercial landing pages, UX/UI, and frontend development. Technical services: automation with n8n, API integration, VPS server configuration, and database management. I combine impactful design with robust technical implementation. Master's student in AI (Tec de Monterrey).",
     availability: "Available for freelance or part-time opportunities",
-    fn: "Santiago"
+    fn: "Santiago",
+    softSkills: "Experienced in leading multidisciplinary teams with a focus on self-management and Kanban methodology. Currently enhancing technical solutions through a Master's in Applied AI at Tecnológico de Monterrey and offering professional bilingual communication with a B2 English level."
   }
 ];
 
