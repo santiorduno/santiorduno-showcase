@@ -189,7 +189,7 @@ export const about: AboutInfo[] = [
     experiences through UX/UI design,
     web development,and AI-enhanced visual content.
     `,
-    bio: "Full-stack web designer specialized in commercial landing pages, UX/UI, and frontend development. Technical services: automation with n8n, API integration, VPS server configuration, and database management. I combine impactful design with robust technical implementation. Master's student in AI (Tec de Monterrey).",
+    bio: "I mix impactful design with robust technical implementation. Master's student in AI (Tec de Monterrey).",
     availability: "Available for freelance or part-time opportunities",
     fn: "Santiago",
     softSkills: "Experienced in leading multidisciplinary teams with a focus on self-management and Kanban methodology. Currently enhancing technical solutions through a Master's in Applied AI at Tecnológico de Monterrey and offering professional bilingual communication with a B2 English level."

@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 interface AnimatedHeaderProps {
-  subTitle: string;
+  subTitle?: string;
   title: string;
   text: string;
   textColor?: string;
