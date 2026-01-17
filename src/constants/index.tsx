@@ -15,7 +15,10 @@ export interface Project {
   description: string;
   image?: string;
   link?: string;
-  technologies?: string[];
+  technologies: {
+    id: number;
+    name: string;
+  }[];
 }
 
 export interface SocialLink {
@@ -117,37 +120,99 @@ export const projects: Project[] = [
     id: 1,
     title: "Las Riberas",
     description: "End-to-end web development for commercial landing page with focus on user experience and conversion optimization.",
-    technologies: ["React", "TypeScript", "Tailwind CSS"]
+    technologies: [
+      {
+        id: 1,
+        name: "Figma UX/UI Design"
+      },
+      {
+        id: 2,
+        name: "Webflow development"
+      },
+    ]
   },
   {
     id: 2,
     title: "Parque La Ruina",
     description: "Commercial landing page with frontend implementation and strategic visual communication for sustainable impact initiatives.",
-    technologies: ["Webflow", "UX/UI Design"]
+    technologies: [
+      {
+        id: 1,
+        name: "Webflow"
+      },
+      {
+        id: 2,
+        name: "Figma UX/UI Design"
+      }
+    ]
   },
   {
     id: 3,
     title: "Santa Eventos",
     description: "Complete web solution focusing on user experience and conversion-optimized design.",
-    technologies: ["Frontend", "Responsive Design"]
+    technologies: [
+      {
+        id: 1,
+        name: "Design System"
+      },
+      {
+        id: 2,
+        name: "Figma Prototyping"
+      }
+    ]
   },
   {
     id: 4,
     title: "Qcom E-commerce",
     description: "Corporate website and e-commerce design including banner creation, product images, site UI/UX, and performance maintenance.",
-    technologies: ["E-commerce", "UI/UX", "Performance"]
+    technologies: [
+      {
+        id: 1,
+        name: "Adobe XD"
+      },
+      {
+        id: 2,
+        name: "UI/UX"
+      },
+      {
+        id: 3,
+        name: "E-commerce management"
+      }
+    ]
   },
   {
     id: 5,
     title: "Arte Clean & Corporativo Kino",
     description: "Web development projects utilizing various frameworks and rendering methods based on project requirements.",
-    technologies: ["SSR", "CSR", "Static Generation"]
+    technologies: [
+      {
+        id: 1,
+        name: "SSR"
+      },
+      {
+        id: 2,
+        name: "CSR"
+      },
+      {
+        id: 3,
+        name: "Static Generation"
+      }
+    ]
   },
   {
     id: 6,
     title: "Neurop",
     description: "Custom web solution with focus on technical implementation and user experience.",
-    technologies: ["Web Development", "Frontend"]
+    technologies: [
+      {
+      id:1,
+      name: "Web Development"
+    },
+    {
+      id:2,
+      name: "Frontend"
+    }
+  ]
   }
 ];
 

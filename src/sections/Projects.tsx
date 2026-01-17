@@ -26,14 +26,13 @@ const Works = () => {
                 {/* divider */}
                 <div className="w-full h-0.5 bg-black/80"></div>
                 {/* framwork */}
-                <div>
-                    <p>
-                        {project.technologies?.map((tech, index) => (
-                            <span key={index} className="text-sm text-black/80">
-                                {tech + " "}
-                            </span>
-                        ))}
-                    </p>
+                <div className="flex px-10 text-xs leading-loose uppercase transition-all duartion-500 md:text-sm gap-x-5 md:group-hover:px-12">
+                    {project.technologies?.map((tech) => (
+                    <p
+                        key={tech.id} 
+                        className="text-black transition-colors duration-500 md:group-hover:text-white"
+                    >{tech.name}</p>
+                    ))}
                 </div>
             </div>
             ))}
