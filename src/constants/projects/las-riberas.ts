@@ -83,6 +83,7 @@ export const lasRiberas: ProjectDetail = {
         caption: "Interactive walkthrough of the final website"
       }
     },
+    /*
     {
       id: "results",
       type: "quote",
@@ -93,5 +94,6 @@ export const lasRiberas: ProjectDetail = {
         role: "Marketing Director, Grupo Koval"
       }
     }
+    */
   ]
 };
