@@ -40,7 +40,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     // 4. Enviar correo
     const { error: emailError } = await resend.emails.send({
-      from: 'Portfolio Contact <onboarding@resend.dev>',
+      from: 'Portfolio Contact <noreply@santiorduno.com>',
       to: 'contacto@santiorduno.com', // Tu correo real
       subject: `Nuevo mensaje de ${name}: ${subject}`,
       html: `
