@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const About = () => {
-    const { name, title, bio, softSkills } = about[0];     
+    const { name, bio, softSkills } = about[0];     
     const imgRef = useRef<HTMLImageElement>(null);
     
     useGSAP(() => {
@@ -37,7 +37,7 @@ const About = () => {
             <section id="about" className="min-h-screen bg-black rounded-b-4xl">
                 <AnimatedHeaderSection 
                 subTitle={name} 
-                title={title}
+                title="About"
                 text={bio}
                 textColor={"text-white"}
                 withScrollTrigger={true}
