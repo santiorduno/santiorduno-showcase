@@ -5,7 +5,6 @@ export const santaEventos: ProjectDetail = {
   title: "Santa Eventos",
   slug: "santa-eventos",
   description: "Complete web solution focusing on user experience and conversion-optimized design.",
-  thumbnail: "/assets/projects/santa-eventos/thumbnail.jpg",
   technologies: [
     { id: 1, name: "Design System" },
     { id: 2, name: "Figma Prototyping" }

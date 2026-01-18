@@ -1,4 +1,4 @@
-import React, { use, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { socialLinks } from "../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";

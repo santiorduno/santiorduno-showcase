@@ -5,7 +5,6 @@ export const parqueLaRuina: ProjectDetail = {
   title: "Parque La Ruina",
   slug: "parque-la-ruina",
   description: "Commercial landing page with frontend implementation and strategic visual communication for sustainable impact initiatives.",
-  thumbnail: "/assets/projects/parque-la-ruina/thumbnail.jpg",
   technologies: [
     { id: 1, name: "Webflow" },
     { id: 2, name: "Figma UX/UI Design" }

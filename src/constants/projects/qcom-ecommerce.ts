@@ -5,7 +5,6 @@ export const qcomEcommerce: ProjectDetail = {
   title: "Qcom E-commerce",
   slug: "qcom-ecommerce",
   description: "Corporate website and e-commerce design including banner creation, product images, site UI/UX, and performance maintenance.",
-  thumbnail: "/assets/projects/qcom-ecommerce/thumbnail.jpg",
   technologies: [
     { id: 1, name: "Adobe XD" },
     { id: 2, name: "UI/UX" },

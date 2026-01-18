@@ -5,7 +5,6 @@ export const neurop: ProjectDetail = {
   title: "Neurop",
   slug: "neurop",
   description: "Custom web solution with focus on technical implementation and user experience.",
-  thumbnail: "/assets/projects/neurop/thumbnail.jpg",
   technologies: [
     { id: 1, name: "Web Development" },
     { id: 2, name: "Frontend" }

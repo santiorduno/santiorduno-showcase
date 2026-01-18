@@ -25,12 +25,10 @@ const ContentRenderer: React.FC<ContentRendererProps> = ({ sections }) => {
         return <VideoBlock key={section.id} data={section.data as any} />;
       case 'gallery':
         return <GalleryBlock key={section.id} data={section.data as any} />;
-      /*
       case 'quote':
         return <QuoteBlock key={section.id} data={section.data as any} />;
       default:
         return null;
-   */ 
     }
   };
 

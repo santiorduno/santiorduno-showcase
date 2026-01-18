@@ -10,7 +10,7 @@ const Works = () => {
         text="Digital products built with a data-driven mindset. Combining visual storytelling with Applied AI and full-stack development to solve complex business challenges."
         />
         <div className="relative flex flex-col font-light">
-            {projects.map((project, index) => (
+            {projects.map((project) => (
             <Link 
               key={project.id}
               to={`/projects/${project.slug}`}

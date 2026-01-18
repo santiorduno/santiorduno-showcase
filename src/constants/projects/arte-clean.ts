@@ -5,7 +5,6 @@ export const arteClean: ProjectDetail = {
   title: "Arte Clean & Corporativo Kino",
   slug: "arte-clean-corporativo-kino",
   description: "Web development projects utilizing various frameworks and rendering methods based on project requirements.",
-  thumbnail: "/assets/projects/arte-clean/thumbnail.jpg",
   technologies: [
     { id: 1, name: "SSR" },
     { id: 2, name: "CSR" },
