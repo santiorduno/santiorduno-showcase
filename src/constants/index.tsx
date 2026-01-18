@@ -92,7 +92,6 @@ export interface SocialLink {
 
 export interface ContactInfo {
   email: string;
-  phone: string;
   location: string;
 }
 
@@ -312,7 +311,6 @@ export const socialLinks: SocialLink[] = [
 // Contact information
 export const contactInfo: ContactInfo = {
   email: "contacto@santiorduno.com",
-  phone: "(66) 2223 0245",
   location: "Hermosillo, Sonora, MX"
 };
 
@@ -321,7 +319,7 @@ export const about: AboutInfo[] = [
   {
     name: "Santiago Orduño",
     age: 25,
-    title: "Product & Web Designer",
+    title: "Design & Development Showcase",
     subtitle: "Product Designer specialized in UX/UI and Web Development",
     about:
     `I help brands create impactful digital

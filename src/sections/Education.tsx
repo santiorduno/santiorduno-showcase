@@ -37,11 +37,11 @@ const Education = () => {
               {certifications.map((cert) => (
                 <div
                   key={cert.id}
-                  className="flex items-center gap-4 p-6 border border-gray-200 rounded-lg hover:bg-black transition-all duration-300 group"
+                  className="flex flex-col md:flex-row md:items-center gap-4 p-6 border border-gray-200 rounded-lg hover:bg-black transition-all duration-300 group"
                 >
                   {/* Logo */}
                   {cert.logo && (
-                    <div className="flex-shrink-0 w-16 h-16 bg-white rounded-lg flex items-center justify-center overflow-hidden">
+                    <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 bg-white rounded-lg flex items-center justify-center overflow-hidden">
                       <img 
                         src={cert.logo} 
                         alt={`${cert.institution} logo`}
@@ -61,7 +61,7 @@ const Education = () => {
                     href={cert.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-shrink-0 px-4 py-2 border border-gray-300 rounded-lg text-sm group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300 flex items-center gap-2"
+                    className="w-full md:w-auto flex-shrink-0 px-4 py-2 border border-gray-300 rounded-lg text-sm group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300 flex items-center gap-2"
                   >
                     View
                     <Icon icon="lucide:external-link" className="size-4" />

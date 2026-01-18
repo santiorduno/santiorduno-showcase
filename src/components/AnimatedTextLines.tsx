@@ -41,7 +41,7 @@ export const AnimatedTextLines: React.FC<AnimatedTextLinesProps> = ({
           ref={(el) => {
             lineRefs.current[index] = el;
           }}
-          className="block text-left leading-relaxed tracking-wide text-pretty"
+          className="block text-left text-lg leading-relaxed tracking-wide text-pretty"
         >
           {line}
         </span>
