@@ -46,8 +46,8 @@ const AnimatedHeaderSection = ({subTitle, title, text, textColor, withScrollTrig
                 </p>
             </div>
 
-            <div className="px-10">
-                <h1 className={`flex flex-col flex-wrap gap-12 ${textColor} uppercase banner-text-responsive sm:gap-16 md:block py-6`}>
+            <div className="px-10 overflow-hidden">
+                <h1 className={`flex flex-col flex-wrap gap-12 ${textColor} uppercase banner-text-responsive sm:gap-12 md:block py-6 break-words`}>
                 {title}
                 </h1>
             </div>

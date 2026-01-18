@@ -1,4 +1,65 @@
 
+// Content Section Types for Project Detail Pages
+export type ContentSectionType = 'text' | 'image' | 'video' | 'gif' | 'gallery' | 'quote';
+
+export interface ContentSection {
+  id: string;
+  type: ContentSectionType;
+  order: number;
+  data: TextContent | MediaContent | GalleryContent | QuoteContent;
+}
+
+export interface TextContent {
+  heading?: string;
+  body: string;
+  alignment?: 'left' | 'center' | 'right';
+}
+
+export interface MediaContent {
+  src: string;
+  alt: string;
+  caption?: string;
+  width?: 'full' | 'large' | 'medium' | 'small';
+}
+
+export interface GalleryContent {
+  images: {
+    src: string;
+    alt: string;
+    caption?: string;
+  }[];
+  layout: 'grid' | 'masonry' | 'carousel';
+  columns?: 2 | 3 | 4;
+}
+
+export interface QuoteContent {
+  text: string;
+  author?: string;
+  role?: string;
+}
+
+// Enhanced Project Interface for Detail Pages
+export interface ProjectDetail {
+  id: number;
+  title: string;
+  slug: string;
+  description: string;
+  technologies: {
+    id: number;
+    name: string;
+  }[];
+  metadata: {
+    client?: string;
+    year: string;
+    duration?: string;
+    role: string;
+    liveUrl?: string;
+    githubUrl?: string;
+  };
+  content: ContentSection[];
+}
+
+// Existing Interfaces
 export interface Service {
   id: number;
   title: string;
@@ -6,12 +67,13 @@ export interface Service {
   items?: {
     title: string;
   }[];
-  icon?: string; 
+  icon?: string;
 }
 
 export interface Project {
   id: number;
   title: string;
+  slug: string; // Added for routing
   description: string;
   image?: string;
   link?: string;
@@ -119,7 +181,9 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "Las Riberas",
+    slug: "las-riberas",
     description: "End-to-end web development for commercial landing page with focus on user experience and conversion optimization.",
+    image: "/assets/projects/las-riberas/thumbnail.png",
     technologies: [
       {
         id: 1,
@@ -134,7 +198,9 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "Parque La Ruina",
+    slug: "parque-la-ruina",
     description: "Commercial landing page with frontend implementation and strategic visual communication for sustainable impact initiatives.",
+    image: "/assets/projects/plant-shop.jpg",
     technologies: [
       {
         id: 1,
@@ -149,7 +215,9 @@ export const projects: Project[] = [
   {
     id: 3,
     title: "Santa Eventos",
+    slug: "santa-eventos",
     description: "Complete web solution focusing on user experience and conversion-optimized design.",
+    image: "/assets/projects/game-store.jpg",
     technologies: [
       {
         id: 1,
@@ -164,7 +232,9 @@ export const projects: Project[] = [
   {
     id: 4,
     title: "Qcom E-commerce",
+    slug: "qcom-ecommerce",
     description: "Corporate website and e-commerce design including banner creation, product images, site UI/UX, and performance maintenance.",
+    image: "/assets/projects/electronics-store.jpg",
     technologies: [
       {
         id: 1,
@@ -183,7 +253,9 @@ export const projects: Project[] = [
   {
     id: 5,
     title: "Arte Clean & Corporativo Kino",
+    slug: "arte-clean-corporativo-kino",
     description: "Web development projects utilizing various frameworks and rendering methods based on project requirements.",
+    image: "/assets/projects/mobile-accessories-store.jpg",
     technologies: [
       {
         id: 1,
@@ -202,7 +274,9 @@ export const projects: Project[] = [
   {
     id: 6,
     title: "Neurop",
+    slug: "neurop",
     description: "Custom web solution with focus on technical implementation and user experience.",
+    image: "/assets/projects/apple-tech-store.jpg",
     technologies: [
       {
       id:1,
@@ -245,7 +319,7 @@ export const contactInfo: ContactInfo = {
 // About information
 export const about: AboutInfo[] = [
   {
-    name: "Santiago Orduño Bennett",
+    name: "Santiago Orduño",
     age: 25,
     title: "Product & Web Designer",
     subtitle: "Product Designer specialized in UX/UI and Web Development",
@@ -289,12 +363,50 @@ export const softSkills: string[] = [
 ];
 
 // Certifications
-export const certifications: string[] = [
-  "Full Stack Developer con JavaScript",
-  "Especialidad: Visualización de datos",
-  "Especialidad: Ciencia de datos",
-  "IBM - Enterprise Data Science in Practice",
-  "Data Analysis with Python"
+export interface Certification {
+  id: number;
+  title: string;
+  institution: string;
+  logo?: string;
+  url: string;
+}
+
+export const certifications: Certification[] = [
+  {
+    id: 1,
+    title: "Full Stack Developer con JavaScript",
+    institution: "Platzi",
+    logo: "https://yt3.googleusercontent.com/jSVrx7B9DIXfx7-Mh16nzdqXcBFoa-FV3fgItxePwv17Dst-U-JuC3_TR6rLq0quRjJPpHy5RQ=s900-c-k-c0x00ffffff-no-rj",
+    url: "https://platzi.com/p/CrisisDesignty/ruta/100-ruta/diploma/detalle/"
+  },
+  {
+    id: 2,
+    title: "Especialidad: Visualización de datos",
+    institution: "Tecnológico de Monterrey",
+    logo: "https://i.pinimg.com/474x/41/ce/59/41ce59248a03255b0e7a5465a5c36f32.jpg",
+    url: "https://www.credential.net/683138c8-1bfe-4609-a85b-b790200dbc21#acc.HrMnNEoc"
+  },
+  {
+    id: 3,
+    title: "Especialidad: Ciencia de datos",
+    institution: "Tecnológico de Monterrey",
+    logo: "https://i.pinimg.com/474x/41/ce/59/41ce59248a03255b0e7a5465a5c36f32.jpg",
+    url: "https://www.credential.net/34786c0a-aefd-4968-adca-bad0e0de118e#acc.9VRY4v6o"
+  },
+  {
+    id: 4,
+    title: "IBM - Enterprise Data Science in Practice",
+    institution: "IBM",
+    logo: "https://www.ibm.com/brand/experience-guides/developer/8f4e3cc2b5d52354a6d43c8edba1e3c9/02_8-bar-reverse.svg",
+    url: "https://www.credly.com/badges/8a6b04f1-d4c1-455c-ae9b-af882d8c7b45/public_url"
+  },
+  {
+    id: 5,
+    title: "Data Analysis with Python",
+    institution: "Cognitive Class",
+    logo: "https://www.ibm.com/brand/experience-guides/developer/8f4e3cc2b5d52354a6d43c8edba1e3c9/02_8-bar-reverse.svg",
+    url: "https://courses.cognitiveclass.ai/certificates/2b8d52cd19ea46119c280ae299d6fe3e"
+  }
 ];
 
 // Education
@@ -314,7 +426,9 @@ export const education = [
   }
 ];
 
-// Work experience
+
+/*
+
 export const experience = [
   {
     id: 1,
@@ -338,3 +452,5 @@ export const experience = [
     period: "Available"
   }
 ];
+
+*/
