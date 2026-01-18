@@ -68,15 +68,51 @@ const Contact = () => {
                         <div>
                             <h2 className="text-2xl lg:text-3xl uppercase mb-4">E-mail</h2>
                             <div className="w-full h-px bg-white/30 mb-4"/>
-                            <a 
+                            <a
                                 href="mailto:contacto@santiorduno.com"
                                 className="text-xl lg:text-2xl tracking-wider lowercase hover:underline block mb-6"
                             >
                                 contacto@santiorduno.com
                             </a>
-                            <p className="text-base lg:text-lg text-gray-400 leading-relaxed">
+                            <p className="text-base lg:text-lg text-gray-400 leading-relaxed mb-8">
                                 Have a project in mind or want to collaborate? Fill out the form and I'll get back to you within 24 hours. Let's create something amazing together.
                             </p>
+                            
+                            {/* Social Links */}
+                            <div>
+                                <h3 className="text-xl lg:text-2xl uppercase mb-4">Connect</h3>
+                                <div className="w-full h-px bg-white/30 mb-4"/>
+                                <div className="flex gap-6">
+                                    <a
+                                        href="https://github.com/santiorduno"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300"
+                                    >
+                                        <Icon icon="mdi:github" className="size-6" />
+                                        <span className="text-sm uppercase tracking-wider">GitHub</span>
+                                    </a>
+                                    <a
+                                        href="https://www.linkedin.com/in/jes%C3%BAs-santiago-ordu%C3%B1o-bennett-629a73225/"
+
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300"
+                                    >
+                                        <Icon icon="mdi:linkedin" className="size-6" />
+                                        <span className="text-sm uppercase tracking-wider">LinkedIn</span>
+                                    </a>
+                                    <a
+                                        href="https://behance.net/santiorduno"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300"
+                                    >
+                                        <Icon icon="mdi:behance" className="size-6" />
+                                        <span className="text-sm uppercase tracking-wider">Behance</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

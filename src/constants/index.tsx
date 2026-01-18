@@ -186,96 +186,67 @@ export const projects: Project[] = [
     technologies: [
       {
         id: 1,
-        name: "Figma UX/UI Design"
+        name: "Figma"
       },
       {
         id: 2,
-        name: "Webflow development"
+        name: "Webflow"
       },
     ]
   },
   {
     id: 2,
-    title: "Parque La Ruina",
-    slug: "parque-la-ruina",
-    description: "Commercial landing page with frontend implementation and strategic visual communication for sustainable impact initiatives.",
-    image: "/assets/projects/plant-shop.jpg",
+    title: "Santa Eventos",
+    slug: "santa-eventos",
+    description: "Complete web solution focusing on user experience and conversion-optimized design.",
+    image: "/assets/projects/santa-eventos/thumbnail.png",
     technologies: [
       {
         id: 1,
-        name: "Webflow"
+        name: "Figma"
       },
       {
         id: 2,
-        name: "Figma UX/UI Design"
+        name: "Relume"
       }
     ]
   },
   {
     id: 3,
-    title: "Santa Eventos",
-    slug: "santa-eventos",
-    description: "Complete web solution focusing on user experience and conversion-optimized design.",
-    image: "/assets/projects/game-store.jpg",
+    title: "Arte Clean",
+    slug: "arte-clean",
+    description: "The core objective of this project was to capture that philosophy in a digital experience that transmits trust, professionalism, and absolute clarity from the first click.",
+    image: "/assets/projects/arte-clean/thumbnail.png",
     technologies: [
       {
         id: 1,
-        name: "Design System"
+        name: "Figma"
       },
       {
         id: 2,
-        name: "Figma Prototyping"
+        name: "TypeScript"
+      },
+      {
+        id: 3,
+        name: "Vercel"
+      },
+      {
+        id: 4, 
+        name: "Google Sheets App Services"
+      },
+      {
+        id: 5,
+        name: "Astro JS"
       }
     ]
   },
+
   {
     id: 4,
-    title: "Qcom E-commerce",
-    slug: "qcom-ecommerce",
-    description: "Corporate website and e-commerce design including banner creation, product images, site UI/UX, and performance maintenance.",
-    image: "/assets/projects/electronics-store.jpg",
-    technologies: [
-      {
-        id: 1,
-        name: "Adobe XD"
-      },
-      {
-        id: 2,
-        name: "UI/UX"
-      },
-      {
-        id: 3,
-        name: "E-commerce management"
-      }
-    ]
-  },
-  {
-    id: 5,
-    title: "Arte Clean & Corporativo Kino",
-    slug: "arte-clean-corporativo-kino",
-    description: "Web development projects utilizing various frameworks and rendering methods based on project requirements.",
-    image: "/assets/projects/mobile-accessories-store.jpg",
-    technologies: [
-      {
-        id: 1,
-        name: "SSR"
-      },
-      {
-        id: 2,
-        name: "CSR"
-      },
-      {
-        id: 3,
-        name: "Static Generation"
-      }
-    ]
-  },
-  {
-    id: 6,
     title: "Neurop",
     slug: "neurop",
     description: "Custom web solution with focus on technical implementation and user experience.",
-    image: "/assets/projects/apple-tech-store.jpg",
+    image: "/assets/projects/neurop/thumbnail.png",
     technologies: [
       {
       id:1,

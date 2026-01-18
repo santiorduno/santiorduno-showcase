@@ -2,11 +2,11 @@
 
 A modern, interactive portfolio website showcasing web development and design projects with rich animations, 3D graphics, and a custom CMS for project management.
 
-## 🚀 Live Demo
+## Portfolio
 
 Visit the live site: [santiorduno.com](https://santiorduno.com)
 
-## 💡 Skills Demonstrated
+## Skills Demonstrated
 
 This portfolio showcases proficiency in:
 
@@ -44,7 +44,7 @@ This portfolio showcases proficiency in:
 - **Image Optimization** - Efficient asset management
 - **Bundle Optimization** - Tree shaking and minification
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Framework:** React 19 + TypeScript
 - **Build Tool:** Vite 6
@@ -57,7 +57,7 @@ This portfolio showcases proficiency in:
 - **Email:** Resend
 - **Deployment:** Vercel
 
-## 📁 Project Structure
+      reactX.configs['recommended-typescript'],
 
 ```
 santiorduno/
@@ -76,7 +76,7 @@ santiorduno/
 └── plans/                   # Documentation
 ```
 
-## 🚦 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -184,7 +184,7 @@ The CMS supports multiple content types:
 - **Gallery** - Image galleries (grid/masonry/carousel)
 - **Quote** - Testimonials and quotes
 
-## 🌐 Deployment
+##  Deployment
 
 ### Vercel (Recommended)
 
@@ -198,25 +198,23 @@ The `vercel.json` configuration is already set up for:
 - SPA routing
 - Build optimization
 
-## 📚 Documentation
+##  Documentation
 
 - [Project Review](plans/project-review.md) - Complete technical documentation
 - [CMS Strategy](plans/project-blog-cms-strategy.md) - Content management guide
 
-## 🤝 Contributing
+## Contributing
 
 This is a personal portfolio project, but suggestions and feedback are welcome!
 
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 📧 Contact
+## Contact
 
 - Website: [santiorduno.com](https://santiorduno.com)
 - Email: contacto@santiorduno.com
 - GitHub: [@santiorduno](https://github.com/santiorduno)
 
 ---
-
-Built with ❤️ using React, TypeScript, and modern web technologies.

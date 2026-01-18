@@ -1,17 +1,17 @@
 import type { ProjectDetail } from '../index';
 
 export const santaEventos: ProjectDetail = {
-  id: 3,
+  id: 2,
   title: "Santa Eventos",
   slug: "santa-eventos",
   description: "Complete web solution focusing on user experience and conversion-optimized design.",
   technologies: [
-    { id: 1, name: "Design System" },
-    { id: 2, name: "Figma Prototyping" }
+    { id: 1, name: "Figma" },
+    { id: 2, name: "Relume" }
   ],
   metadata: {
-    year: "2023",
-    role: "UX/UI Designer & Developer"
+    year: "2025",
+    role: "UX/UI Designer"
   },
   content: [
     {
@@ -29,7 +29,7 @@ export const santaEventos: ProjectDetail = {
       type: "image",
       order: 2,
       data: {
-        src: "/assets/projects/santa-eventos/hero.jpg",
+        src: "/assets/projects/santa-eventos/hero.png",
         alt: "Santa Eventos Homepage",
         caption: "Modern, elegant homepage design",
         width: "full"
@@ -54,23 +54,24 @@ export const santaEventos: ProjectDetail = {
         columns: 3,
         images: [
           {
-            src: "/assets/projects/santa-eventos/gallery/prototype-1.jpg",
+            src: "/assets/projects/santa-eventos/image-1.png",
             alt: "Services page",
             caption: "Services showcase"
           },
           {
-            src: "/assets/projects/santa-eventos/gallery/prototype-2.jpg",
+            src: "/assets/projects/santa-eventos/image-2.png",
             alt: "Portfolio page",
             caption: "Event portfolio"
           },
           {
-            src: "/assets/projects/santa-eventos/gallery/prototype-3.jpg",
+            src: "/assets/projects/santa-eventos/image-3.png",
             alt: "Contact page",
             caption: "Contact form design"
           }
         ]
       }
     },
+    /*
     {
       id: "results-quote",
       type: "quote",
@@ -81,5 +82,6 @@ export const santaEventos: ProjectDetail = {
         role: "Santa Eventos"
       }
     }
+    */
   ]
 };

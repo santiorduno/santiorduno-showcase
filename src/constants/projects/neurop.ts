@@ -6,11 +6,13 @@ export const neurop: ProjectDetail = {
   slug: "neurop",
   description: "Custom web solution with focus on technical implementation and user experience.",
   technologies: [
-    { id: 1, name: "Web Development" },
-    { id: 2, name: "Frontend" }
+    { id: 1, name: "Astro JS" },
+    { id: 2, name: "Tailwind CSS" },
+    { id: 3, name: "Figma" }
   ],
   metadata: {
-    year: "2024",
+    liveUrl: "https://neurop.netlify.app/",
+    year: "2025",
     role: "Frontend Developer"
   },
   content: [
@@ -29,7 +31,7 @@ export const neurop: ProjectDetail = {
       type: "image",
       order: 2,
       data: {
-        src: "/assets/projects/neurop/hero.jpg",
+        src: "/assets/projects/neurop/hero.png",
         alt: "Neurop Homepage",
         caption: "Clean, professional healthcare interface",
         width: "full"
@@ -54,17 +56,17 @@ export const neurop: ProjectDetail = {
         columns: 3,
         images: [
           {
-            src: "/assets/projects/neurop/gallery/services.jpg",
+            src: "/assets/projects/neurop/image-1.png",
             alt: "Services page",
             caption: "Medical services overview"
           },
           {
-            src: "/assets/projects/neurop/gallery/team.jpg",
+            src: "/assets/projects/neurop/image-2.png",
             alt: "Team page",
             caption: "Healthcare professionals"
           },
           {
-            src: "/assets/projects/neurop/gallery/contact.jpg",
+            src: "/assets/projects/neurop/image-3.png",
             alt: "Contact page",
             caption: "Appointment booking system"
           }
@@ -81,6 +83,7 @@ export const neurop: ProjectDetail = {
         alignment: "left"
       }
     },
+    /*
     {
       id: "testimonial",
       type: "quote",
@@ -91,5 +94,6 @@ export const neurop: ProjectDetail = {
         role: "Neurop"
       }
     }
+    */
   ]
 };

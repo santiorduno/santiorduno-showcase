@@ -6,8 +6,8 @@ export const lasRiberas: ProjectDetail = {
   slug: "las-riberas",
   description: "End-to-end web development for commercial landing page with focus on user experience and conversion optimization.",
   technologies: [
-    { id: 1, name: "Figma UX/UI Design" },
-    { id: 2, name: "Webflow development" }
+    { id: 1, name: "Figma" },
+    { id: 2, name: "Webflow" }
   ],
   metadata: {
     client: "Koval Inmobiliaria",
@@ -22,7 +22,7 @@ export const lasRiberas: ProjectDetail = {
       order: 1,
       data: {
         heading: "Project Overview",
-        body: "Las Riberas is a luxury residential development that required a sophisticated web presence to match its premium positioning. The project involved complete UX/UI design in Figma followed by development in Webflow, ensuring a seamless user experience and optimal conversion rates.",
+        body: "Las Riberas is a friendly residential development in Hermosillo that required a sophisticated web presence to match its premium positioning. The project involved complete UX/UI design in Figma followed by development in Webflow, ensuring a seamless user experience and optimal conversion rates.",
         alignment: "left"
       }
     },
@@ -43,7 +43,7 @@ export const lasRiberas: ProjectDetail = {
       order: 3,
       data: {
         heading: "Design Process",
-        body: "The design process began with extensive user research and competitive analysis. We created multiple iterations in Figma, focusing on creating an elegant, conversion-optimized experience that would resonate with the target demographic.",
+        body: "The design process began with extensive user research and competitive analysis. We created multiple iterations in Figma of the Sitemap and design system, focusing on creating an elegant, conversion-optimized experience that would resonate with the target demographic.",
         alignment: "left"
       }
     },
@@ -66,7 +66,7 @@ export const lasRiberas: ProjectDetail = {
             caption: "Final design system"
           },
           {
-            src: "/assets/projects/las-riberas/",
+            src: "/assets/projects/las-riberas/image-3.png",
             alt: "Design mockup 3",
             caption: "Mobile responsive views"
           }
