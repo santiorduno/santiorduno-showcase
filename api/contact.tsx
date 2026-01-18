@@ -26,7 +26,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // Resend  
     const { error: emailError } = await resend.emails.send({
       from: 'Portfolio Contact <onboarding@resend.dev>', // Usa tu dominio verificado después
-      to: 'contacto@santiorduno.com', // A donde te llegará la alerta
+      to: 'santiago.orduno2000@gmail.com', // A donde te llegará la alerta
       subject: `Nuevo mensaje de ${name}`,
       html: `
         <h1>Nuevo contacto del portafolio</h1>
