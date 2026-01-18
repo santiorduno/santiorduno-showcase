@@ -976,7 +976,7 @@ public/assets/projects/
 │   │   ├── image-1.jpg
 │   │   ├── image-2.jpg
 │   │   └── image-3.jpg
-│   ├── videos/
+│   ├── videof s/
 │   │   └── demo.mp4
 │   └── gifs/
 │       └── interaction.gif
@@ -1185,3 +1185,4 @@ This implementation provides:
 - ✅ **SEO ready** with proper meta tags
 
 The system is designed to be maintainable, scalable, and easy to extend with new features in the future.
+

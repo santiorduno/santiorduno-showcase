@@ -37,17 +37,17 @@ const ServiceSummary = () =>{
 
     return <section className="mt-20 overflow-hidden font-light leading-snug text-snug text-center mb-42 contact-text-responsive">
         <div id="title-service-1" className="">
-            <p>Architecture</p>
+            <p>Product Design</p>
         </div>
         <div id="title-service-2" className="flex items-center justify-center gap-3 translate-x-16">
-            <p className="font-normal"> Development</p>
+            <p className="font-normal">Web</p>
             <div className="w-10 h-1 md:w-32 bg-gold"/>
             <p>Development</p>
         </div>
         <div id="title-service-3" className="flex items-center justify-center gap-3 -translate-x-48">
-            <p>APIs</p>
+            <p>Visual Content</p>
             <div className="w-10 h-1 md:w-32 bg-gold"/>
-            <p className="italic">Frotends</p>
+            <p className="italic">AI Integration</p>
             <div className="w-10 h-1 md:w-32 bg-gold"/>
             <p>Scalability</p>
         </div>

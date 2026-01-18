@@ -123,7 +123,7 @@ export const services: Service[] = [
   {
     id: 2,
     title: "Web Development",
-    description: "Full-stack web development specialized in commercial landing pages, frontend implementation, and conversion-optimized design using modern frameworks[cite: 10, 22].",
+    description: "Full-stack web development specialized in commercial landing pages, frontend implementation, and conversion-optimized design using modern frameworks",
     items: [
       {title: "React & Astro Development"},
       {title: "Responsive Web Design"},
@@ -145,7 +145,7 @@ export const services: Service[] = [
   {
     id: 4,
     title: "Technical Integration",
-    description: "Automation with Python and n8n, API integration, and technical implementation of designs using various rendering methods[cite: 11, 23].",
+    description: "Automation with Python and n8n, API integration, and technical implementation of designs using various rendering methods.",
     items: [
       {title: "Workflow Automation"},
       {title: "API & Data Integration"},
@@ -156,7 +156,7 @@ export const services: Service[] = [
   {
     id: 5,
     title: "3D Design & Motion Graphics",
-    description: "Creation of impactful digital content for social media and advertising campaigns, with focus on performance and engagement[cite: 32].",
+    description: "Creation of impactful digital content for social media and advertising campaigns, with focus on performance and engagement.",
     items: [
       {title: "3D Modeling & Rendering"},
       {title: "Ad Campaign Design"},
@@ -167,7 +167,7 @@ export const services: Service[] = [
   {
     id: 6,
     title: "Learning Data Analysis",
-    description: "Data analysis and visualization with Excel, Tableau, and Python. Certified in IBM Enterprise Data Science[cite: 11, 51].",
+    description: "Data analysis and visualization with Excel, Tableau, and Python. Certified in IBM Enterprise Data Science.",
     items: [
       {title: "Data Visualization"},
       {title: "User Analytics"},
