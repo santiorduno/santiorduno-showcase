@@ -1,10 +1,13 @@
 import { Canvas } from "@react-three/fiber";
-import { Planet } from "../components/Planet";
+import { lazy, Suspense } from "react";
 import { Environment, Lightformer } from "@react-three/drei";
 import { Float } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 import { about } from "../constants";
+
+// Lazy load Planet component for better performance
+const Planet = lazy(() => import("../components/Planet").then(module => ({ default: module.Planet })));
 
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 833});
@@ -23,9 +26,11 @@ const Hero = () => {
       >
         <Canvas shadows camera={{position: [0, 0, -10], fov: 17.5, near: 1, far: 20}}>
             <ambientLight intensity={0.5} />
-            <Float speed={0.5}>
-              <Planet scale={isMobile ? 0.7 : 1}/>
-            </Float>
+            <Suspense fallback={null}>
+              <Float speed={0.5}>
+                <Planet scale={isMobile ? 0.7 : 1}/>
+              </Float>
+            </Suspense>
             <Environment resolution={256}>
               <group rotation={[-Math.PI / 3, 4, 1]}>
 
