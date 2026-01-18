@@ -78,11 +78,11 @@ const Contact = () => {
                                 Have a project in mind or want to collaborate? Fill out the form and I'll get back to you within 24 hours. Let's create something amazing together.
                             </p>
                             
-                            {/* Social Links */}
+{/* Social Links */}
                             <div>
                                 <h3 className="text-xl lg:text-2xl uppercase mb-4">Connect</h3>
                                 <div className="w-full h-px bg-white/30 mb-4"/>
-                                <div className="flex gap-6">
+                                <div className="flex flex-col md:flex-row gap-4 md:gap-6">
                                     <a
                                         href="https://github.com/santiorduno"
                                         target="_blank"
@@ -96,7 +96,7 @@ const Contact = () => {
                                         href="https://www.linkedin.com/in/jes%C3%BAs-santiago-ordu%C3%B1o-bennett-629a73225/"
 
                                         target="_blank"
-                                        rel="noopener noreferrer"
+                                        rel="noopener noreferr                            er"
                                         className="group flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300"
                                     >
                                         <Icon icon="mdi:linkedin" className="size-6" />
