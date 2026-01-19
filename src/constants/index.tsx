@@ -215,12 +215,12 @@ export const projects: Project[] = [
     id: 3,
     title: "Arte Clean",
     slug: "arte-clean",
-    description: "The core objective of this project was to capture that philosophy in a digital experience that transmits trust, professionalism, and absolute clarity from the first click.",
+    description: "This website is a showcase of my work and skills. It's built with React and TypeScript. Tailwind for styling and Gsap library for animations.",
     image: "/assets/projects/arte-clean/thumbnail.png",
     technologies: [
       {
         id: 1,
-        name: "Figma"
+        name: "React"
       },
       {
         id: 2,
@@ -232,15 +232,14 @@ export const projects: Project[] = [
       },
       {
         id: 4, 
-        name: "Google Sheets App Services"
+        name: "Tailwind"
       },
       {
         id: 5,
-        name: "Astro JS"
+        name: "Gsap"
       }
     ]
   },
-
   {
     id: 4,
     title: "Neurop",
@@ -256,6 +255,39 @@ export const projects: Project[] = [
       id:2,
       name: "Frontend"
     }
+  ]
+  },
+  {
+    id: 5,
+    title: "This Website",
+    slug: "this-website",
+    description: "Custom web solution with focus on technical implementation and user experience.",
+    image: "/assets/projects/this-website/thumbnail.png",
+    technologies: [
+    {
+      id:1,
+      name: "React"
+    },
+    {
+      id:2,
+      name: "TypeScript"
+    },
+    {
+      id:3,
+      name: "Tailwind"
+    },
+    {
+      id:4,
+      name: "Gsap"
+    },
+    {
+      id:5,
+      name: "Supabase"
+    },
+    {
+      id:6,
+      name: "Resend JS"
+    },
   ]
   }
 ];
@@ -304,6 +336,7 @@ export const about: AboutInfo[] = [
   }
 ];
 
+/*
 // Skills
 export const hardSkills: string[] = [
   "Illustrator",
@@ -331,6 +364,8 @@ export const softSkills: string[] = [
   "Time management"
 ];
 
+*/
+
 // Certifications
 export interface Certification {
   id: number;
@@ -340,6 +375,7 @@ export interface Certification {
   url: string;
 }
 
+// Education
 export const certifications: Certification[] = [
   {
     id: 1,
@@ -378,7 +414,6 @@ export const certifications: Certification[] = [
   }
 ];
 
-// Education
 export const education = [
   {
     id: 1,

@@ -5,6 +5,7 @@ import { santaEventos } from './santa-eventos';
 import { qcomEcommerce } from './qcom-ecommerce';
 import { arteClean } from './arte-clean';
 import { neurop } from './neurop';
+import { thisWebsite } from './this-website';
 
 export const projectsContent: ProjectDetail[] = [
   lasRiberas,
@@ -13,6 +14,7 @@ export const projectsContent: ProjectDetail[] = [
   qcomEcommerce,
   arteClean,
   neurop,
+  thisWebsite
 ];
 
 // Helper function to get project by slug
