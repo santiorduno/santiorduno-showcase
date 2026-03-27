@@ -111,7 +111,7 @@ export const services: Service[] = [
   {
     id: 1,
     title: "Product Design",
-    description: "Advanced UX/UI design and interactive prototyping in Figma, ensuring intuitive and engaging user journeys for web and product interfaces[cite: 7].",
+    description: "Advanced UX/UI design and interactive prototyping in Figma, ensuring intuitive and engaging user journeys for web and product interfaces.",
     items: [
       {title: "Interactive Prototyping"},
       {title: "User Research & Testing"},
@@ -159,7 +159,7 @@ export const services: Service[] = [
     items: [
       {title: "3D Modeling & Rendering"},
       {title: "Ad Campaign Design"},
-      {title: "Comertial Design"},
+      {title: "Commercial Design"},
       {title: "Video Editing"},
     ]
   },

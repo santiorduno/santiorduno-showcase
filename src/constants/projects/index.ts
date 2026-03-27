@@ -1,17 +1,13 @@
 import type { ProjectDetail } from '../index';
 import { lasRiberas } from './las-riberas';
-import { parqueLaRuina } from './parque-la-ruina';
 import { santaEventos } from './santa-eventos';
-import { qcomEcommerce } from './qcom-ecommerce';
 import { arteClean } from './arte-clean';
 import { neurop } from './neurop';
 import { thisWebsite } from './this-website';
 
 export const projectsContent: ProjectDetail[] = [
   lasRiberas,
-  parqueLaRuina,
   santaEventos,
-  qcomEcommerce,
   arteClean,
   neurop,
   thisWebsite

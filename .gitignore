@@ -45,19 +45,8 @@ dist
 ehthumbs.db
 Thumbs.db
 
-# Vercel
-.vercel
-vercel.json
-vercel-build-output
-
-# Supabase
-.supabase
-.supabase/db
-.supabase/functions
-
-# Resend
-.resend
-.resend/config.json
+# Cloudflare
+functions/node_modules/
 
 # Environment files
 .env

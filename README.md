@@ -1,6 +1,6 @@
 # Santi Orduño - Portfolio
 
-A modern, interactive portfolio website showcasing web development and design projects with rich animations, 3D graphics, and a custom CMS for project management.
+A modern, interactive portfolio website showcasing web development and design projects with rich animations, 3D graphics, and TypeScript-based content files.
 
 ## Portfolio
 
@@ -28,13 +28,12 @@ This portfolio showcases proficiency in:
 
 ### Architecture & Patterns
 - **Component-Based Architecture** - Modular, reusable components
-- **Custom CMS System** - TypeScript-based content management
+- **TypeScript-based content files** - Structured project content in `.ts` files
 - **Dynamic Routing** - React Router with lazy loading
 - **Responsive Design** - Mobile-first approach
 
 ### Backend Integration
-- **Serverless Functions** - Vercel API routes
-- **Supabase** - Database integration for contact form
+- **Cloudflare Pages Functions** - Serverless contact form handler
 - **Resend** - Email service integration
 - **Environment Variables** - Secure configuration management
 
@@ -44,7 +43,7 @@ This portfolio showcases proficiency in:
 - **Image Optimization** - Efficient asset management
 - **Bundle Optimization** - Tree shaking and minification
 
-##  Tech Stack
+## Tech Stack
 
 - **Framework:** React 19 + TypeScript
 - **Build Tool:** Vite 6
@@ -52,12 +51,9 @@ This portfolio showcases proficiency in:
 - **Animations:** GSAP + Lenis
 - **3D Graphics:** Three.js + React Three Fiber
 - **Routing:** React Router DOM 7
-- **Backend:** Vercel Serverless Functions
-- **Database:** Supabase
+- **Backend:** Cloudflare Pages Functions
 - **Email:** Resend
-- **Deployment:** Vercel
-
-      reactX.configs['recommended-typescript'],
+- **Deployment:** Cloudflare Pages
 
 ```
 santiorduno/
@@ -68,27 +64,27 @@ santiorduno/
 │   ├── sections/            # Homepage sections
 │   ├── pages/               # Route pages
 │   ├── constants/           # Data & configuration
-│   │   └── projects/        # Project content (CMS)
+│   │   └── projects/        # Project content files
 │   └── main.tsx            # App entry point
-├── api/                     # Serverless functions
-│   └── contact.ts          # Contact form handler
+├── functions/               # Cloudflare Pages Functions
+│   └── api/
+│       └── contact.ts      # Contact form handler
 ├── public/                  # Static assets
-└── plans/                   # Documentation
 ```
 
-##  Getting Started
+## Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 
 ### Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/santiorduno.git
-cd santiorduno
+git clone https://github.com/santiorduno/santiorduno-showcase.git
+cd santiorduno-showcase
 ```
 
 2. Install dependencies:
@@ -96,10 +92,8 @@ cd santiorduno
 npm install
 ```
 
-3. Create `.env.local` file:
+3. Create `.env.local` file (only needed for local function testing):
 ```env
-SUPABASE_URL=your_supabase_url
-SUPABASE_ANON_KEY=your_supabase_key
 RESEND_API_KEY=your_resend_key
 ```
 
@@ -124,7 +118,7 @@ Preview production build:
 npm run preview
 ```
 
-## 📝 Adding New Projects
+## Adding New Projects
 
 1. Create a new file in `src/constants/projects/`:
 ```typescript
@@ -174,9 +168,7 @@ export const projectsContent: ProjectDetail[] = [
 
 3. Add assets to `public/assets/projects/my-project/`
 
-## 🎨 Content Block Types
-
-The CMS supports multiple content types:
+## Content Block Types
 
 - **Text** - Headings and paragraphs
 - **Image** - Single images with captions
@@ -184,24 +176,17 @@ The CMS supports multiple content types:
 - **Gallery** - Image galleries (grid/masonry/carousel)
 - **Quote** - Testimonials and quotes
 
-##  Deployment
+## Deployment
 
-### Vercel (Recommended)
+### Cloudflare Pages
 
 1. Push to GitHub
-2. Import project in Vercel
-3. Add environment variables
-4. Deploy
+2. Import project in Cloudflare Pages
+3. Set build command: `npm run build`, output directory: `dist`
+4. Add environment variable: `RESEND_API_KEY`
+5. Deploy
 
-The `vercel.json` configuration is already set up for:
-- Serverless functions in `/api`
-- SPA routing
-- Build optimization
-
-##  Documentation
-
-- [Project Review](plans/project-review.md) - Complete technical documentation
-- [CMS Strategy](plans/project-blog-cms-strategy.md) - Content management guide
+Cloudflare Pages automatically picks up `functions/api/contact.ts` and serves it at `/api/contact`.
 
 ## Contributing
 
