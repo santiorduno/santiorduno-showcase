@@ -5,13 +5,20 @@ interface Env {
 
 const CORS_HEADERS = {
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type',
 };
 
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
+
+    if (url.pathname === '/api/health' && request.method === 'GET') {
+      return Response.json(
+        { status: 'ok', hasKey: Boolean(env.RESEND_API_KEY) },
+        { status: 200, headers: CORS_HEADERS }
+      );
+    }
 
     if (url.pathname.startsWith('/api/contact')) {
       if (request.method === 'OPTIONS') {
@@ -80,13 +87,17 @@ export default {
           if (!res.ok) {
             const error = await res.text();
             console.error('Resend error:', error);
-            return Response.json({ error: 'Failed to send email' }, { status: 500, headers: CORS_HEADERS });
+            return Response.json(
+              { error: 'Failed to send email', detail: error, status: res.status },
+              { status: 502, headers: CORS_HEADERS }
+            );
           }
 
           return Response.json({ success: true }, { status: 200, headers: CORS_HEADERS });
         } catch (err) {
-          console.error('Unexpected error:', err);
-          return Response.json({ error: 'Internal server error' }, { status: 500, headers: CORS_HEADERS });
+          const message = err instanceof Error ? err.message : String(err);
+          console.error('Unexpected error:', message);
+          return Response.json({ error: 'Internal server error', detail: message }, { status: 500, headers: CORS_HEADERS });
         }
       }
 
