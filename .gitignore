@@ -45,6 +45,9 @@ dist
 ehthumbs.db
 Thumbs.db
 
+# Vercel
+.vercel
+
 # Cloudflare
 functions/node_modules/
 
