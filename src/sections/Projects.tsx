@@ -1,13 +1,16 @@
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
-import { projects } from "../constants";
 import { Icon } from "@iconify-icon/react";
 import { Link } from "react-router-dom";
+import { useContent } from "../i18n/useContent";
+import { useLanguage } from "../i18n/LanguageContext";
 
 const Works = () => {
+    const { projects } = useContent();
+    const { t } = useLanguage();
     return <section id="work" className="flex flex-col min-h-screen">
-        <AnimatedHeaderSection 
-        title="Works"
-        text="Digital products built with a data-driven mindset. Combining visual storytelling with Applied AI and full-stack development to solve complex business challenges."
+        <AnimatedHeaderSection
+        title={t.works.title}
+        text={t.works.text}
         />
         <div className="relative flex flex-col font-light">
             {projects.map((project) => (

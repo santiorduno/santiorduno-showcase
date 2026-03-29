@@ -1,14 +1,17 @@
 import React, { useEffect } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
-import { getProjectBySlug } from '../constants/projects';
 import ProjectHeader from '../components/project-detail/ProjectHeader';
 import ProjectMetadata from '../components/project-detail/ProjectMetadata';
 import ContentRenderer from '../components/project-detail/ContentRenderer';
 import ProjectNavigation from '../components/project-detail/ProjectNavigation';
+import { useContent } from '../i18n/useContent';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const ProjectDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
-  
+  const { getProjectBySlug } = useContent();
+  const { t } = useLanguage();
+
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,9 +27,9 @@ const ProjectDetailPage: React.FC = () => {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-light mb-4 text-white">Project Not Found</h1>
-          <p className="text-gray-400 mb-8">The project you're looking for doesn't exist.</p>
-          <a href="/" className="text-lg text-white underline">Return to Homepage</a>
+          <h1 className="text-4xl font-light mb-4 text-white">{t.projectDetail.notFoundTitle}</h1>
+          <p className="text-gray-400 mb-8">{t.projectDetail.notFoundText}</p>
+          <a href="/" className="text-lg text-white underline">{t.projectDetail.notFoundLink}</a>
         </div>
       </div>
     );

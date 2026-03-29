@@ -4,14 +4,15 @@ import { Environment, Lightformer } from "@react-three/drei";
 import { Float } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
-import { about } from "../constants";
+import { useContent } from "../i18n/useContent";
 
 // Lazy load Planet component for better performance
 const Planet = lazy(() => import("../components/Planet").then(module => ({ default: module.Planet })));
 
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 833});
-  const { fn, title, about: bioDescription } = about[0];
+  const { about } = useContent();
+  const { fn, title, about: bioDescription } = about;
 
   return (
     <section id="home" className="flex flex-col justify-end min-h-screen">

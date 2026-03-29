@@ -1,21 +1,24 @@
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
-import { education, certifications } from "../constants";
 import { Icon } from "@iconify-icon/react";
+import { useContent } from "../i18n/useContent";
+import { useLanguage } from "../i18n/LanguageContext";
 
 const Education = () => {
+  const { education, certifications } = useContent();
+  const { t } = useLanguage();
   return (
     <section id="education" className="min-h-screen">
       <AnimatedHeaderSection
-        title="Edu"
-        text="Continuous learning and professional development through formal education and industry certifications."
+        title={t.education.title}
+        text={t.education.text}
         withScrollTrigger={true}
       />
-      
+
       <div className="px-10 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Education Column */}
           <div>
-            <h2 className="text-2xl lg:text-3xl font-light mb-8 uppercase tracking-wider">Academic</h2>
+            <h2 className="text-2xl lg:text-3xl font-light mb-8 uppercase tracking-wider">{t.education.academic}</h2>
             <div className="space-y-6">
               {education.map((edu) => (
                 <div key={edu.id} className="border-l-2 border-black pl-6 py-4">
@@ -32,7 +35,7 @@ const Education = () => {
 
           {/* Certifications Column */}
           <div>
-            <h2 className="text-2xl lg:text-3xl font-light mb-8 uppercase tracking-wider">Certifications</h2>
+            <h2 className="text-2xl lg:text-3xl font-light mb-8 uppercase tracking-wider">{t.education.certifications}</h2>
             <div className="space-y-4">
               {certifications.map((cert) => (
                 <div
@@ -63,7 +66,7 @@ const Education = () => {
                     rel="noopener noreferrer"
                     className="w-full md:w-auto flex-shrink-0 px-4 py-2 border border-gray-300 rounded-lg text-sm group-hover:bg-white group-hover:text-black group-hover:border-white transition-all duration-300 flex items-center gap-2"
                   >
-                    View
+                    {t.education.viewButton}
                     <Icon icon="lucide:external-link" className="size-4" />
                   </a>
                 </div>

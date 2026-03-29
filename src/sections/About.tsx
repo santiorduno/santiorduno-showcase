@@ -1,12 +1,13 @@
 import { useRef } from "react";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection"
 import { AnimatedTextLines } from "../components/AnimatedTextLines";
-import { about } from "../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useContent } from "../i18n/useContent";
 
 const About = () => {
-    const { name, bio, softSkills } = about[0];     
+    const { about } = useContent();
+    const { name, bio, softSkills } = about;
     const imgRef = useRef<HTMLImageElement>(null);
     
     useGSAP(() => {

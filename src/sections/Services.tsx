@@ -1,13 +1,13 @@
 import { useRef } from "react";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
-import { about } from "../constants";
-import { services } from "../constants";
 import { useMediaQuery } from "react-responsive";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useContent } from "../i18n/useContent";
 
 const Services = () =>{
-    const { subtitle, availability } = about[0];
+    const { about, services } = useContent();
+    const { subtitle, availability } = about;
     const serviceRefs = useRef<(HTMLDivElement | null) []>([]);
     const isDesktop = useMediaQuery({ minWidth: "48rem" }); //778px
     useGSAP(() => {

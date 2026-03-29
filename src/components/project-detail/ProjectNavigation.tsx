@@ -1,13 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify-icon/react';
-import { projectsContent } from '../../constants/projects';
+import { useContent } from '../../i18n/useContent';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 interface ProjectNavigationProps {
   currentSlug: string;
 }
 
 const ProjectNavigation: React.FC<ProjectNavigationProps> = ({ currentSlug }) => {
+  const { projectsContent } = useContent();
+  const { t } = useLanguage();
   const currentIndex = projectsContent.findIndex(p => p.slug === currentSlug);
   const prevProject = currentIndex > 0 ? projectsContent[currentIndex - 1] : null;
   const nextProject = currentIndex < projectsContent.length - 1 ? projectsContent[currentIndex + 1] : null;
@@ -16,31 +19,31 @@ const ProjectNavigation: React.FC<ProjectNavigationProps> = ({ currentSlug }) =>
     <div className="max-w-6xl mx-auto px-6 py-16">
       <div className="flex justify-between items-center border-t border-white/20 pt-8">
         {/* Back to Projects */}
-        <Link 
+        <Link
           to="/#work"
           className="flex items-center gap-2 text-lg text-white hover:underline"
         >
           <Icon icon="lucide:arrow-left" className="size-5" />
-          Back to Projects
+          {t.projectDetail.backToProjects}
         </Link>
 
         {/* Prev/Next Navigation */}
         <div className="flex gap-8">
           {prevProject && (
-            <Link 
+            <Link
               to={`/projects/${prevProject.slug}`}
               className="flex items-center gap-2 text-lg text-white hover:underline"
             >
               <Icon icon="lucide:chevron-left" className="size-5" />
-              Previous
+              {t.projectDetail.previousLabel}
             </Link>
           )}
           {nextProject && (
-            <Link 
+            <Link
               to={`/projects/${nextProject.slug}`}
               className="flex items-center gap-2 text-lg text-white hover:underline"
             >
-              Next
+              {t.projectDetail.nextLabel}
               <Icon icon="lucide:chevron-right" className="size-5" />
             </Link>
           )}

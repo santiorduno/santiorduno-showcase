@@ -1,12 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import HomePage from "./pages/HomePage";
+import { LanguageProvider } from "./i18n/LanguageContext";
 
 // Lazy load ProjectDetailPage for better performance
 const ProjectDetailPage = lazy(() => import("./pages/ProjectDetailPage"));
 
 const App = () => {
   return (
+    <LanguageProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -24,6 +26,7 @@ const App = () => {
         />
       </Routes>
     </BrowserRouter>
+    </LanguageProvider>
   );
 };
 

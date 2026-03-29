@@ -1,9 +1,10 @@
 import { useState } from "react";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 import { Icon } from "@iconify-icon/react";
+import { useLanguage } from "../i18n/LanguageContext";
 
 const Contact = () => {
-    const text = "Currently available for freelance work or Job Positions.";
+    const { t } = useLanguage();
     
     // 1. Estados para los datos y el estatus del envío
     const [formData, setFormData] = useState({
@@ -54,9 +55,9 @@ const Contact = () => {
     return <section id="contact" className="flex flex-col justify-between min-h-screen bg-black">
         <div>
             <AnimatedHeaderSection
-               subTitle="Get in touch"
-               title="Contact"
-               text={text}
+               subTitle={t.contact.subTitle}
+               title={t.contact.title}
+               text={t.contact.text}
                textColor="text-white"
                withScrollTrigger={true}
             />
@@ -66,7 +67,7 @@ const Contact = () => {
                     {/* Contact Info */}
                     <div className="flex flex-col justify-center gap-8 font-light text-white">
                         <div>
-                            <h2 className="text-2xl lg:text-3xl uppercase mb-4">E-mail</h2>
+                            <h2 className="text-2xl lg:text-3xl uppercase mb-4">{t.contact.emailLabel}</h2>
                             <div className="w-full h-px bg-white/30 mb-4"/>
                             <a
                                 href="mailto:contacto@santiorduno.com"
@@ -75,12 +76,12 @@ const Contact = () => {
                                 contacto@santiorduno.com
                             </a>
                             <p className="text-base lg:text-lg text-gray-400 leading-relaxed mb-8">
-                                Have a project in mind or want to collaborate? Fill out the form and I'll get back to you within 24 hours. Let's create something amazing together.
+                                {t.contact.reachOutText}
                             </p>
                             
 {/* Social Links */}
                             <div>
-                                <h3 className="text-xl lg:text-2xl uppercase mb-4">Connect</h3>
+                                <h3 className="text-xl lg:text-2xl uppercase mb-4">{t.contact.connectLabel}</h3>
                                 <div className="w-full h-px bg-white/30 mb-4"/>
                                 <div className="flex flex-col md:flex-row gap-4 md:gap-6">
                                     <a
@@ -118,13 +119,13 @@ const Contact = () => {
 
                     {/* Contact Form */}
                     <div className="font-light">
-                        <h2 className="text-2xl lg:text-3xl text-white uppercase mb-8">Send a Message</h2>
+                        <h2 className="text-2xl lg:text-3xl text-white uppercase mb-8">{t.contact.formTitle}</h2>
                         
                         <form onSubmit={handleSubmit} className="space-y-6">
                             {/* Name */}
                             <div>
                                 <label htmlFor="name" className="block text-sm text-gray-400 mb-2 uppercase tracking-wider">
-                                    Name
+                                    {t.contact.nameLabel}
                                 </label>
                                 <input
                                     type="text"
@@ -135,14 +136,14 @@ const Contact = () => {
                                     required
                                     disabled={status === 'submitting'}
                                     className="w-full px-4 py-3 bg-transparent border border-white/30 rounded-lg text-white placeholder-gray-500 focus:border-white focus:outline-none transition-colors duration-300 disabled:opacity-50"
-                                    placeholder="Your name"
+                                    placeholder={t.contact.namePlaceholder}
                                 />
                             </div>
 
                             {/* Email */}
                             <div>
                                 <label htmlFor="email" className="block text-sm text-gray-400 mb-2 uppercase tracking-wider">
-                                    Email
+                                    {t.contact.emailFieldLabel}
                                 </label>
                                 <input
                                     type="email"
@@ -153,14 +154,14 @@ const Contact = () => {
                                     required
                                     disabled={status === 'submitting'}
                                     className="w-full px-4 py-3 bg-transparent border border-white/30 rounded-lg text-white placeholder-gray-500 focus:border-white focus:outline-none transition-colors duration-300 disabled:opacity-50"
-                                    placeholder="your@email.com"
+                                    placeholder={t.contact.emailPlaceholder}
                                 />
                             </div>
 
                             {/* Subject */}
                             <div>
                                 <label htmlFor="subject" className="block text-sm text-gray-400 mb-2 uppercase tracking-wider">
-                                    Subject
+                                    {t.contact.subjectLabel}
                                 </label>
                                 <input
                                     type="text"
@@ -171,14 +172,14 @@ const Contact = () => {
                                     required
                                     disabled={status === 'submitting'}
                                     className="w-full px-4 py-3 bg-transparent border border-white/30 rounded-lg text-white placeholder-gray-500 focus:border-white focus:outline-none transition-colors duration-300 disabled:opacity-50"
-                                    placeholder="Project inquiry"
+                                    placeholder={t.contact.subjectPlaceholder}
                                 />
                             </div>
 
                             {/* Message */}
                             <div>
                                 <label htmlFor="message" className="block text-sm text-gray-400 mb-2 uppercase tracking-wider">
-                                    Message
+                                    {t.contact.messageLabel}
                                 </label>
                                 <textarea
                                     id="message"
@@ -189,7 +190,7 @@ const Contact = () => {
                                     rows={6}
                                     disabled={status === 'submitting'}
                                     className="w-full px-4 py-3 bg-transparent border border-white/30 rounded-lg text-white placeholder-gray-500 focus:border-white focus:outline-none transition-colors duration-300 resize-none disabled:opacity-50"
-                                    placeholder="Tell me about your project..."
+                                    placeholder={t.contact.messagePlaceholder}
                                 />
                             </div>
 
@@ -204,17 +205,17 @@ const Contact = () => {
                                     `}
                                 >
                                     {status === 'submitting' ? (
-                                        <>Sending...</>
+                                        <>{t.contact.sendingButton}</>
                                     ) : status === 'success' ? (
-                                        <>Message Sent <Icon icon="lucide:check" className="size-5" /></>
+                                        <>{t.contact.successButton} <Icon icon="lucide:check" className="size-5" /></>
                                     ) : (
-                                        <>Send Message <Icon icon="lucide:send" className="size-5" /></>
+                                        <>{t.contact.sendButton} <Icon icon="lucide:send" className="size-5" /></>
                                     )}
                                 </button>
                                 
                                 {status === 'error' && (
                                     <p className="text-red-400 text-center text-sm">
-                                        Something went wrong. Please try again or email me directly.
+                                        {t.contact.errorMessage}
                                     </p>
                                 )}
                             </div>

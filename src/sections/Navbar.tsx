@@ -3,6 +3,7 @@ import { socialLinks } from "../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Link } from "react-scroll";
+import { useLanguage } from "../i18n/LanguageContext";
 
 const Navbar: React.FC = () => {
   const navRef = useRef<HTMLElement>(null);
@@ -13,7 +14,8 @@ const Navbar: React.FC = () => {
   const tl = useRef<gsap.core.Timeline | null>(null);
   const iconTl = useRef<gsap.core.Timeline | null>(null);
   const [isOpen, setIsOpen] = useState(false);
-  const [showBurger, setShowBurger] = useState(false); 
+  const [showBurger, setShowBurger] = useState(false);
+  const { lang, setLang, t } = useLanguage();
 
   useGSAP(() => {
     gsap.set(navRef.current, { xPercent: 100 });
@@ -102,35 +104,40 @@ const Navbar: React.FC = () => {
         className="fixed z-50 flex flex-col justify-between w-full h-full px-10 uppercase bg-black text-white/80 py-28 gap-y-10 md:w-1/2 md:left-1/2"
       >
         <div className="flex flex-col text-5xl gap-y-2 md:text-6xl lg:text-8xl">
-          {["home", "services", "about", "work", "education", "contact"].map(
-            (section: string, index: number) => (
+          {([
+            { key: "home",      label: t.nav.home },
+            { key: "services",  label: t.nav.services },
+            { key: "about",     label: t.nav.about },
+            { key: "work",      label: t.nav.work },
+            { key: "education", label: t.nav.education },
+            { key: "contact",   label: t.nav.contact },
+          ]).map(({ key, label }, index) => (
               <div key={index}>
                 <Link
                   className="transition-all duration-300 cursor-pointer hover:text-white"
-                  to={section}
+                  to={key}
                   smooth
                   offset={0}
                   duration={2000}
                   onClick={toggleMenu}
-                > 
-                  {section}
+                >
+                  {label}
                 </Link>
               </div>
-            )
-          )}
+            ))}
         </div>
         <div
           ref={contactRef}
           className="flex flex-col text-wrap justify-between gap-8 md:flex-row"
         >
           <div className="font-light">
-            <p className="tracking-wider text-white/50">E-mail</p>
+            <p className="tracking-wider text-white/50">{t.nav.emailLabel}</p>
             <p className="text-xl tracking-widest lowercase text-pretty">
               contacto@santiorduno.com
             </p>
           </div>
           <div className="font-light">
-            <p className="tracking-wider text-white/50">Behance & LinkedIn</p>
+            <p className="tracking-wider text-white/50">{t.nav.socialLabel}</p>
             <div className="flex flex-col flex-wrap md:flex-row gap-x-2">
               {socialLinks.map((social, index) => (
                 <a
@@ -147,6 +154,18 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </nav>
+      <button
+        onClick={() => setLang(lang === 'en' ? 'es' : 'en')}
+        aria-label="Switch language"
+        className="fixed z-50 flex items-center justify-center bg-black text-white rounded-full cursor-pointer w-14 h-14 md:w-20 md:h-20 top-4 right-28 md:right-36 text-sm font-light tracking-widest uppercase transition-colors duration-300 hover:bg-white hover:text-black"
+        style={
+          showBurger
+            ? { clipPath: "circle(50% at 50% 50%)" }
+            : { clipPath: "circle(0% at 50% 50%)" }
+        }
+      >
+        {lang === 'en' ? 'ES' : 'EN'}
+      </button>
       <div
         className="fixed z-50 flex flex-col items-center justify-center gap-1 transition-all duration-300 bg-black rounded-full cursor-pointer w-14 h-14 md:w-20 md:h-20 top-4 right-10"
         onClick={toggleMenu}
