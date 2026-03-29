@@ -113,7 +113,7 @@ function mergeProjectDetails(
           );
         }
 
-        return { ...block, data: data as typeof block.data };
+        return { ...block, data: data as unknown as typeof block.data };
       }),
     };
   });
