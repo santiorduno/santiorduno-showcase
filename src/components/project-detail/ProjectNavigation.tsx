@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify-icon/react';
-import { useContent } from '../../i18n/useContent';
+import { useProjects } from '../../hooks/useSanityData';
 import { useLanguage } from '../../i18n/LanguageContext';
 
 interface ProjectNavigationProps {
@@ -9,11 +9,11 @@ interface ProjectNavigationProps {
 }
 
 const ProjectNavigation: React.FC<ProjectNavigationProps> = ({ currentSlug }) => {
-  const { projectsContent } = useContent();
+  const { data: projects } = useProjects();
   const { t } = useLanguage();
-  const currentIndex = projectsContent.findIndex(p => p.slug === currentSlug);
-  const prevProject = currentIndex > 0 ? projectsContent[currentIndex - 1] : null;
-  const nextProject = currentIndex < projectsContent.length - 1 ? projectsContent[currentIndex + 1] : null;
+  const currentIndex = projects.findIndex(p => p.slug === currentSlug);
+  const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
+  const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-16">

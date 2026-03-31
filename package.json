@@ -13,6 +13,8 @@
     "@gsap/react": "^2.1.2",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.5.0",
+    "@sanity/client": "^7.20.0",
+    "@sanity/vision": "^5.18.0",
     "@tailwindcss/vite": "^4.1.18",
     "gsap": "^3.14.2",
     "lenis": "^1.3.17",
@@ -22,6 +24,7 @@
     "react-responsive": "^10.0.1",
     "react-router-dom": "^7.12.0",
     "react-scroll": "^1.9.3",
+    "sanity": "^5.18.0",
     "tailwindcss": "^4.1.18",
     "three": "^0.182.0"
   },
@@ -37,6 +40,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "tsx": "^4.21.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^6.0.7"

@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-import { socialLinks } from "../constants";
+import { useSocialLinks } from "../hooks/useSanityData";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Link } from "react-scroll";
 import { useLanguage } from "../i18n/LanguageContext";
 
 const Navbar: React.FC = () => {
+  const { data: socialLinks } = useSocialLinks();
   const navRef = useRef<HTMLElement>(null);
   const linksRef = useRef<(HTMLAnchorElement | null)[]>([]);
   const contactRef = useRef<HTMLDivElement>(null);

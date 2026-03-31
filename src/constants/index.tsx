@@ -107,6 +107,7 @@ export interface AboutInfo {
   softSkills: string
 }
 
+// Fallback data — primary source is Sanity CMS (project: qwhs1663)
 export const services: Service[] = [
   {
     id: 1,

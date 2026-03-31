@@ -4,15 +4,16 @@ import ProjectHeader from '../components/project-detail/ProjectHeader';
 import ProjectMetadata from '../components/project-detail/ProjectMetadata';
 import ContentRenderer from '../components/project-detail/ContentRenderer';
 import ProjectNavigation from '../components/project-detail/ProjectNavigation';
-import { useContent } from '../i18n/useContent';
+import { useProjectDetail } from '../hooks/useSanityData';
+import { mergeProjectWithTranslation } from '../i18n/useContent';
 import { useLanguage } from '../i18n/LanguageContext';
+import { projectTranslationsES } from '../i18n/content/es/index';
 
 const ProjectDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
-  const { getProjectBySlug } = useContent();
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
+  const { data: rawProject, loading } = useProjectDetail(slug ?? '');
 
-  // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
@@ -21,9 +22,11 @@ const ProjectDetailPage: React.FC = () => {
     return <Navigate to="/" replace />;
   }
 
-  const project = getProjectBySlug(slug);
+  if (loading && !rawProject) {
+    return null;
+  }
 
-  if (!project) {
+  if (!rawProject) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
@@ -34,6 +37,8 @@ const ProjectDetailPage: React.FC = () => {
       </div>
     );
   }
+
+  const project = mergeProjectWithTranslation(rawProject, projectTranslationsES, lang);
 
   return (
     <div className="min-h-screen bg-black text-white">

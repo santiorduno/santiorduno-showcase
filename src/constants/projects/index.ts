@@ -5,6 +5,8 @@ import { arteClean } from './arte-clean';
 import { neurop } from './neurop';
 import { thisWebsite } from './this-website';
 
+// Fallback data — primary source is Sanity CMS (project: qwhs1663)
+// Do not delete: imported by src/hooks/useSanityData.ts as fallback
 export const projectsContent: ProjectDetail[] = [
   lasRiberas,
   santaEventos,
