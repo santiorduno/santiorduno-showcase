@@ -1,6 +1,6 @@
 # MD files
 PLAN.md
-LANG_TOOL.md
+CLAUDE.md
 
 # Logs
 logs
@@ -87,3 +87,5 @@ coverage
 
 # Grunt intermediate storage (https://gruntjs.com/
 .env*.local
+.claude
+.claude-flow
