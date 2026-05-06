@@ -13,11 +13,8 @@ export interface UITranslations {
   };
   serviceSummary: {
     line1: string;
-    line2a: string;
-    line2b: string;
-    line3a: string;
-    line3b: string;
-    line3c: string;
+    line2: string;
+    line3: string;
     line4: string;
   };
   works: {

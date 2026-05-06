@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "updatedAt": 1776971709454,
+  "nodeCount": 2,
+  "nodes": {
+    "mem-MEMORY-memory-index": {
+      "id": "mem-MEMORY-memory-index",
+      "category": "core",
+      "confidence": 0.385,
+      "accessCount": 0,
+      "createdAt": 1774929605847
+    },
+    "mem-project_bizopps_frontend----": {
+      "id": "mem-project_bizopps_frontend----",
+      "category": "project_bizopps_frontend",
+      "confidence": 0.385,
+      "accessCount": 0,
+      "createdAt": 1774929605847
+    }
+  },
+  "edges": [],
+  "pageRanks": {
+    "mem-MEMORY-memory-index": 0.5,
+    "mem-project_bizopps_frontend----": 0.5
+  }
+}

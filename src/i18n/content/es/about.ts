@@ -1,82 +1,57 @@
 // Spanish translations for global constants content
 
 export const aboutES = {
-  title: 'Portafolio de Diseño y Desarrollo',
-  subtitle: 'Diseñador de Producto especializado en UX/UI y Desarrollo Web',
-  about: `Ayudo a marcas a crear experiencias
-  digitales impactantes a través del diseño UX/UI,
-  desarrollo web y contenido visual mejorado con IA.
-  `,
-  bio: 'Combino diseño impactante con implementación técnica sólida. Estudiante de Maestría en IA (Tec de Monterrey).',
-  availability: 'Disponible para proyectos freelance o posiciones de tiempo parcial',
-  softSkills: 'Experiencia liderando equipos multidisciplinarios con enfoque en autogestión y metodología Kanban. Actualmente fortaleciendo soluciones técnicas mediante una Maestría en IA Aplicada en el Tecnológico de Monterrey, con comunicación profesional bilingüe en nivel B2 de inglés.',
+  title: 'Trabajo Seleccionado',
+  subtitle: 'Diseñador de Producto · Investigación UX · Design Systems · Frontend',
+  about: `Diseño productos digitales de la investigación a la implementación\n— trabajando en la intersección de UX,\nsistemas de diseño y desarrollo frontend.`,
+  bio: 'Diseñador de Producto con 3+ años construyendo productos reales. Cursando una Maestría en IA Aplicada en el Tec de Monterrey — y aplicándola.',
+  availability: 'Disponible para roles de tiempo completo en México o remoto en EUA',
+  softSkills: 'Experiencia trabajando en equipos multidisciplinarios de diseño, desarrollo y producto. Autogestión con metodología Kanban y habilidad para facilitar la comunicación entre diseño e ingeniería. Cursando una Maestría en IA Aplicada en el Tec de Monterrey — con materias en metodologías ágiles, Scrum y gestión de desarrollo de software. Inglés profesional (B2).',
 };
 
 export const servicesES = [
   {
     id: 1,
-    title: 'Diseño de Producto',
-    description: 'Diseño UX/UI avanzado y prototipado interactivo en Figma, garantizando recorridos de usuario intuitivos y atractivos para interfaces web y de producto.',
+    title: 'UX & Diseño de Producto',
+    description: 'Proceso de diseño end-to-end: investigación de usuarios, entrevistas y arquitectura de información hasta prototipos de alta fidelidad e interacción avanzada en Figma — incluyendo motion y micro-interacciones. Trabajo desde el problema, no desde la solución, validando con usuarios reales mediante testing estructurado.',
     items: [
-      { title: 'Prototipado Interactivo' },
-      { title: 'Investigación y Testing de Usuarios' },
+      { title: 'Investigación de Usuarios & Entrevistas' },
+      { title: 'Testing de Usabilidad (Maze)' },
       { title: 'Arquitectura de Información' },
-      { title: 'Sistemas de Diseño (Figma)' },
+      { title: 'Design Systems & Prototipado Avanzado' },
     ],
   },
   {
     id: 2,
-    title: 'Desarrollo Web',
-    description: 'Desarrollo web full-stack especializado en landing pages comerciales, implementación frontend y diseño optimizado para conversión usando frameworks modernos.',
+    title: 'Implementación Frontend',
+    description: 'Construyo lo que diseño. React, Astro y Tailwind CSS para landing pages, apps web y sitios orientados a conversión — eligiendo el método de renderizado adecuado (SSR, CSR, SSG) según las necesidades de cada proyecto.',
     items: [
       { title: 'Desarrollo con React y Astro' },
-      { title: 'Diseño Web Responsivo' },
+      { title: 'Diseño Responsivo & Accesible' },
       { title: 'Optimización de Rendimiento' },
-      { title: 'Soluciones de E-commerce' },
+      { title: 'Implementación Orientada a Conversión' },
     ],
   },
   {
     id: 3,
-    title: 'Contenido Visual e IA',
-    description: 'Desarrollo de contenido visual potenciado por herramientas de IA (Midjourney, ComfyUI). Experto en Adobe Creative Suite (Photoshop, Illustrator) e integración de IA visual.',
+    title: 'Flujos de Trabajo con IA',
+    description: 'Integro IA generativa y automatización en flujos de diseño y desarrollo — desde producción visual con Midjourney y ComfyUI hasta automatización de procesos con Python y n8n. Menos trabajo manual, más consistencia en el resultado.',
     items: [
-      { title: 'Flujos de Trabajo con IA Generativa' },
-      { title: 'Ilustración Vectorial' },
-      { title: 'Creación de Activos Digitales' },
-      { title: 'Visuales Mejorados con IA' },
+      { title: 'IA Generativa para Producción Visual' },
+      { title: 'Automatización de Flujos (n8n, Python)' },
+      { title: 'Integración de APIs' },
+      { title: 'Procesos de Diseño Mejorados con IA' },
     ],
   },
   {
     id: 4,
-    title: 'Integración Técnica',
-    description: 'Automatización con Python y n8n, integración de APIs e implementación técnica de diseños usando diversos métodos de renderizado.',
+    title: 'Analítica & Medición',
+    description: 'Análisis de comportamiento mediante heatmaps, grabaciones de sesión y embudos para tomar decisiones de diseño con datos reales. He implementado infraestructura de medición desde cero y usado analítica para validar mejoras de UX.',
     items: [
-      { title: 'Automatización de Flujos de Trabajo' },
-      { title: 'Integración de APIs y Datos' },
-      { title: 'Scripting con Python' },
-      { title: 'Implementación SSR/CSR' },
-    ],
-  },
-  {
-    id: 5,
-    title: 'Diseño 3D y Motion Graphics',
-    description: 'Creación de contenido digital impactante para redes sociales y campañas publicitarias, con enfoque en rendimiento y engagement.',
-    items: [
-      { title: 'Modelado y Renderizado 3D' },
-      { title: 'Diseño de Campañas Publicitarias' },
-      { title: 'Diseño Comercial' },
-      { title: 'Edición de Video' },
-    ],
-  },
-  {
-    id: 6,
-    title: 'Análisis de Datos',
-    description: 'Análisis y visualización de datos con Excel, Tableau y Python. Certificado en IBM Enterprise Data Science.',
-    items: [
-      { title: 'Visualización de Datos' },
-      { title: 'Analítica de Usuarios' },
-      { title: 'Inteligencia de Negocio' },
-      { title: 'Python para Ciencia de Datos' },
+      { title: 'Heatmaps & Análisis de Sesión (Maze, Clarity)' },
+      { title: 'Google Analytics & Embudos' },
+      { title: 'Seguimiento de Comportamiento de Usuario' },
+      { title: 'Decisiones de Diseño Basadas en Datos' },
     ],
   },
 ];

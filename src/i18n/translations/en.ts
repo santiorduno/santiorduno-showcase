@@ -12,13 +12,10 @@ export const en: UITranslations = {
     socialLabel: 'Behance & LinkedIn',
   },
   serviceSummary: {
-    line1: 'Product Design',
-    line2a: 'Web',
-    line2b: 'Development',
-    line3a: 'Visual Content',
-    line3b: 'AI Integration',
-    line3c: 'Scalability',
-    line4: 'Databases',
+    line1: 'UX Research & Product Design',
+    line2: 'Design Systems & Prototyping',
+    line3: 'Frontend Implementation',
+    line4: 'Agile · SCRUM · Figma · AI',
   },
   works: {
     title: 'Works',

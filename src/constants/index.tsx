@@ -110,70 +110,48 @@ export interface AboutInfo {
 export const services: Service[] = [
   {
     id: 1,
-    title: "Product Design",
-    description: "Advanced UX/UI design and interactive prototyping in Figma, ensuring intuitive and engaging user journeys for web and product interfaces.",
+    title: "UX & Product Design",
+    description: "End-to-end design process: user research, interviews, and information architecture through to high-fidelity prototypes and advanced interaction in Figma — including motion and micro-interactions. I work from the problem, not the solution, validating with real users through structured testing.",
     items: [
-      {title: "Interactive Prototyping"},
-      {title: "User Research & Testing"},
+      {title: "User Research & Interviews"},
+      {title: "Usability Testing (Maze)"},
       {title: "Information Architecture"},
-      {title: "Design Systems (Figma)"},
+      {title: "Design Systems & Advanced Prototyping"},
     ]
   },
   {
     id: 2,
-    title: "Web Development",
-    description: "Full-stack web development specialized in commercial landing pages, frontend implementation, and conversion-optimized design using modern frameworks",
+    title: "Frontend Implementation",
+    description: "I build what I design. React, Astro and Tailwind CSS for landing pages, web apps, and conversion-focused sites — choosing the right rendering method (SSR, CSR, SSG) for each project's needs.",
     items: [
       {title: "React & Astro Development"},
-      {title: "Responsive Web Design"},
+      {title: "Responsive & Accessible Design"},
       {title: "Performance Optimization"},
-      {title: "E-commerce Solutions"},
+      {title: "Conversion-Focused Implementation"},
     ]
   },
   {
     id: 3,
-    title: "Visual Content & AI",
-    description: "Visual content development enhanced by AI tools (Midjourney, ComfyUI). Expert in Adobe Creative Suite (Photoshop, Illustrator) and visual AI integration.",
+    title: "AI-Augmented Workflows",
+    description: "I integrate generative AI and automation into design and development workflows — from visual production with Midjourney and ComfyUI to process automation with Python and n8n. Less manual work, more consistent output.",
     items: [
-      {title: "Generative AI Workflows"},
-      {title: "Vector Illustration"},
-      {title: "Digital Asset Creation"},
-      {title: "AI-Enhanced Visuals"},
+      {title: "Generative AI for Visual Production"},
+      {title: "Workflow Automation (n8n, Python)"},
+      {title: "API Integration"},
+      {title: "AI-Enhanced Design Processes"},
     ]
   },
   {
     id: 4,
-    title: "Technical Integration",
-    description: "Automation with Python and n8n, API integration, and technical implementation of designs using various rendering methods.",
+    title: "Analytics & Measurement",
+    description: "Behavior analysis through heatmaps, session recordings, and funnels to inform design decisions with real data. I've implemented measurement infrastructure from scratch and used analytics to validate UX improvements.",
     items: [
-      {title: "Workflow Automation"},
-      {title: "API & Data Integration"},
-      {title: "Python Scripting"},
-      {title: "SSR/CSR Implementation"},
+      {title: "Heatmaps & Session Analysis (Maze, Clarity)"},
+      {title: "Google Analytics & Funnels"},
+      {title: "User Behavior Tracking"},
+      {title: "Data-Informed Design Decisions"},
     ]
   },
-  {
-    id: 5,
-    title: "3D Design & Motion Graphics",
-    description: "Creation of impactful digital content for social media and advertising campaigns, with focus on performance and engagement.",
-    items: [
-      {title: "3D Modeling & Rendering"},
-      {title: "Ad Campaign Design"},
-      {title: "Commercial Design"},
-      {title: "Video Editing"},
-    ]
-  },
-  {
-    id: 6,
-    title: "Learning Data Analysis",
-    description: "Data analysis and visualization with Excel, Tableau, and Python. Certified in IBM Enterprise Data Science.",
-    items: [
-      {title: "Data Visualization"},
-      {title: "User Analytics"},
-      {title: "Business Intelligence"},
-      {title: "Python for Data Science"},
-    ]
-  }
 ];
 
 export const projects: Project[] = [
@@ -181,17 +159,26 @@ export const projects: Project[] = [
     id: 1,
     title: "Las Riberas",
     slug: "las-riberas",
-    description: "End-to-end web development for commercial landing page with focus on user experience and conversion optimization.",
+    description: "UX research, design system, and Webflow development for a premium residential development — validated with heatmap analysis.",
     image: "/assets/projects/las-riberas/thumbnail.png",
     technologies: [
-      {
-        id: 1,
-        name: "Figma"
-      },
-      {
-        id: 2,
-        name: "Webflow"
-      },
+      { id: 1, name: "Figma" },
+      { id: 2, name: "Webflow" },
+      { id: 3, name: "UX Research" },
+      { id: 4, name: "Heatmaps" }
+    ]
+  },
+  {
+    id: 6,
+    title: "Corporativo Kino",
+    slug: "corporativo-kino",
+    description: "UX strategy, technical audit, and redesign for an industrial holding. Research-first approach with analytics implementation from scratch.",
+    image: "/assets/projects/corporativo-kino/thumbnail.png",
+    technologies: [
+      { id: 1, name: "UX Research" },
+      { id: 2, name: "Figma" },
+      { id: 3, name: "Webflow" },
+      { id: 4, name: "Google Analytics" }
     ]
   },
   {
@@ -314,7 +301,7 @@ export const socialLinks: SocialLink[] = [
 // Contact information
 export const contactInfo: ContactInfo = {
   email: "contacto@santiorduno.com",
-  location: "Hermosillo, Sonora, MX"
+  location: "Mexico City, MX (relocating July 2026)"
 };
 
 // About information
@@ -322,17 +309,13 @@ export const about: AboutInfo[] = [
   {
     name: "Santiago Orduño",
     age: 25,
-    title: "Design & Development Showcase",
-    subtitle: "Product Designer specialized in UX/UI and Web Development",
-    about:
-    `I help brands create impactful digital
-    experiences through UX/UI design,
-    web development,and AI-enhanced visual content.
-    `,
-    bio: "I mix impactful design with robust technical implementation. Master's student in AI (Tec de Monterrey).",
-    availability: "Available for freelance or part-time opportunities",
+    title: "Product Designer",
+    subtitle: "Product Designer · UX Research · Design Systems · Frontend",
+    about: `I design digital products from research to implementation\n— working at the intersection of UX,\ndesign systems, and frontend development.`,
+    bio: "Product Designer with 3+ years building real products. Currently pursuing a Master's in Applied AI at Tec de Monterrey — and using it.",
+    availability: "Open to full-time roles in Mexico or USA remote",
     fn: "Santiago",
-    softSkills: "Experienced in leading multidisciplinary teams with a focus on self-management and Kanban methodology. Currently enhancing technical solutions through a Master's in Applied AI at Tecnológico de Monterrey and offering professional bilingual communication with a B2 English level."
+    softSkills: "Experienced working in multidisciplinary teams across design, development, and product. Self-managed with Kanban methodology and comfortable facilitating communication between design and engineering. Currently in a Master's in Applied AI at Tec de Monterrey — with coursework in agile methodologies, Scrum, and software development management. Professional English (B2)."
   }
 ];
 

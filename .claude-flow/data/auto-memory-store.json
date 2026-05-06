@@ -1,0 +1,28 @@
+[
+  {
+    "id": "mem-MEMORY-memory-index",
+    "key": "memory-index",
+    "content": "- [BizzopsGroup frontend project](project_bizopps_frontend.md) — Angular + Tailwind + Django, Figma designs, design tokens, stack details",
+    "summary": "Memory Index",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/sants/.claude/projects/-Users-sants-Projects-bizopps-group/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1774929605847
+  },
+  {
+    "id": "mem-project_bizopps_frontend----",
+    "key": "-",
+    "content": "name: BizzopsGroup frontend project\ndescription: Angular + Tailwind + Django project for Bizopps Group institutional website\ntype: project\n---\n\nBuilding the institutional website for Bizopps Group from Figma designs.\n\n**Why:** New project from scratch (empty repo), client has Figma designs for desktop and mobile.\n\n**How to apply:** When working on this repo, context is: Angular 19 standalone components in `frontend/`, Django scaffold in `backend/`. Tailwind v3 with custom design tokens matching ",
+    "summary": "---",
+    "namespace": "project_bizopps_frontend",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/sants/.claude/projects/-Users-sants-Projects-bizopps-group/memory/project_bizopps_frontend.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1774929605847
+  }
+]
