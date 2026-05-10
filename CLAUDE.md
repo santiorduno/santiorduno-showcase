@@ -13,7 +13,13 @@ npm run lint      # ESLint
 npx tsc --noEmit  # Type-check only (no emit)
 ```
 
-There are no automated tests. Verification is manual (see LANG_TOOL.md for i18n checklist).
+There are no automated tests. Verification is manual.
+
+To test the Cloudflare Worker locally (contact form + `/api/health`):
+```bash
+# Create .dev.vars with RESEND_API_KEY=... then:
+npx wrangler dev
+```
 
 ## Deployment
 
@@ -69,6 +75,23 @@ To add new UI strings: update `UITranslations` in `types.ts`, then add the key t
 Project detail pages render a list of `ContentSection` blocks. Types: `text | image | video | gif | gallery | quote`. Each block type has its own component under `src/components/project-detail/content-blocks/`. The `ContentRenderer.tsx` dispatches to the right block component.
 
 To add a new project: create `src/constants/projects/my-project.ts` (see README for the full template), export it from `src/constants/projects/index.ts`, and optionally add a Spanish translation file in `src/i18n/content/es/projects/`.
+
+### Two project data layers
+
+There are **two separate project lists** that must both be updated when adding a project:
+
+1. `constants/index.tsx` → `projects: Project[]` — homepage card data (title, slug, image, technologies). This is what `sections/Projects.tsx` renders.
+2. `constants/projects/index.ts` → `projectsContent: ProjectDetail[]` — full detail page data with content blocks. This is what `ProjectDetailPage` uses.
+
+A project missing from `projects[]` won't appear on the homepage; a project missing from `projectsContent[]` will 404 on its detail route.
+
+### Icons
+
+Icons use `@iconify-icon/react`: `import { Icon } from "@iconify-icon/react"` with Iconify icon name strings (e.g. `<Icon icon="ph:arrow-right" />`).
+
+### Smooth scroll
+
+Lenis smooth scroll is applied at the `HomePage` level only via `<ReactLenis root>` in `src/pages/HomePage.tsx`. The `/projects/:slug` route does not use Lenis.
 
 ### Build chunking
 

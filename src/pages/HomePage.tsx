@@ -7,8 +7,11 @@ import About from "../sections/About";
 import Projects from "../sections/Projects";
 import Education from "../sections/Education";
 import Contact from "../sections/Contact";
+import { useScrollDepth } from "../hooks/useScrollDepth";
 
 const HomePage = () => {
+  useScrollDepth({ pageName: 'home' });
+
   return (
     <ReactLenis root className="relative w-screen min-h-screen">
       <Navbar />

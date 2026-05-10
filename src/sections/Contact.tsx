@@ -2,6 +2,7 @@ import { useState } from "react";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 import { Icon } from "@iconify-icon/react";
 import { useLanguage } from "../i18n/LanguageContext";
+import { trackCtaClick, trackContactFormSubmit } from "../utils/analytics";
 
 const Contact = () => {
     const { t } = useLanguage();
@@ -27,6 +28,7 @@ const Contact = () => {
     // 3. Función de envío al Backend
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        trackCtaClick('contact_section');
         setStatus('submitting');
 
         try {
@@ -39,9 +41,9 @@ const Contact = () => {
             });
 
             if (response.ok) {
+                trackContactFormSubmit('contact_section');
                 setStatus('success');
-                setFormData({ name: "", email: "", subject: "", message: "" }); // Limpiar formulario
-                // Resetear el mensaje de éxito después de 5 segundos
+                setFormData({ name: "", email: "", subject: "", message: "" });
                 setTimeout(() => setStatus('idle'), 5000);
             } else {
                 setStatus('error');
@@ -72,6 +74,7 @@ const Contact = () => {
                             <a
                                 href="mailto:contacto@santiorduno.com"
                                 className="text-xl lg:text-2xl tracking-wider lowercase hover:underline block mb-6"
+                                onClick={() => trackCtaClick('contact_email')}
                             >
                                 contacto@santiorduno.com
                             </a>

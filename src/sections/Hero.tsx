@@ -7,6 +7,7 @@ import { Link } from "react-scroll";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 import { useContent } from "../i18n/useContent";
 import { useLanguage } from "../i18n/LanguageContext";
+import { trackCtaClick } from "../utils/analytics";
 
 // Lazy load Planet component for better performance
 const Planet = lazy(() => import("../components/Planet").then(module => ({ default: module.Planet })));
@@ -25,7 +26,7 @@ const Hero = () => {
         text={bioDescription}
       />
       <div className="px-10 pb-12">
-        <Link to="work" smooth duration={1500} offset={0}>
+        <Link to="work" smooth duration={1500} offset={0} onClick={() => trackCtaClick('hero')}>
           <button className="border border-navy text-navy uppercase tracking-widest font-light text-sm px-8 py-3 rounded-full hover:bg-navy hover:text-cream transition-all duration-300 cursor-pointer">
             {t.nav.work}
           </button>

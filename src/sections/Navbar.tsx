@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Link } from "react-scroll";
 import { useLanguage } from "../i18n/LanguageContext";
+import { trackCtaClick } from "../utils/analytics";
 
 const Navbar: React.FC = () => {
   const navRef = useRef<HTMLElement>(null);
@@ -119,7 +120,10 @@ const Navbar: React.FC = () => {
                   smooth
                   offset={0}
                   duration={2000}
-                  onClick={toggleMenu}
+                  onClick={() => {
+                    if (key === 'contact') trackCtaClick('nav');
+                    toggleMenu();
+                  }}
                 >
                   {label}
                 </Link>

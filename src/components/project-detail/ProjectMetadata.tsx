@@ -2,6 +2,7 @@ import React from 'react';
 import type { ProjectDetail } from '../../constants';
 import { Icon } from '@iconify-icon/react';
 import { useLanguage } from '../../i18n/LanguageContext';
+import { trackCtaClick } from '../../utils/analytics';
 
 interface ProjectMetadataProps {
   metadata: ProjectDetail['metadata'];
@@ -34,6 +35,7 @@ const ProjectMetadata: React.FC<ProjectMetadataProps> = ({ metadata }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-lg font-medium text-white flex items-center gap-2 hover:underline"
+              onClick={() => trackCtaClick('case_study')}
             >
               {t.projectDetail.visitLabel} <Icon icon="lucide:external-link" className="size-4" />
             </a>

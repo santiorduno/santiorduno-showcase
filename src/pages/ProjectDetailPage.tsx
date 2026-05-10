@@ -6,22 +6,33 @@ import ContentRenderer from '../components/project-detail/ContentRenderer';
 import ProjectNavigation from '../components/project-detail/ProjectNavigation';
 import { useContent } from '../i18n/useContent';
 import { useLanguage } from '../i18n/LanguageContext';
+import { useScrollDepth } from '../hooks/useScrollDepth';
+import { trackCaseStudyView } from '../utils/analytics';
 
 const ProjectDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const { getProjectBySlug } = useContent();
   const { t } = useLanguage();
 
-  // Scroll to top on mount
+  const project = slug ? getProjectBySlug(slug) : null;
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
 
+  useEffect(() => {
+    if (!project) return;
+    trackCaseStudyView(project.slug, project.title);
+  }, [project]);
+
+  useScrollDepth({
+    pageName: `case_study:${project?.slug ?? 'unknown'}`,
+    caseStudySlug: project?.slug,
+  });
+
   if (!slug) {
     return <Navigate to="/" replace />;
   }
-
-  const project = getProjectBySlug(slug);
 
   if (!project) {
     return (
