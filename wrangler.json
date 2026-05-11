@@ -1,14 +1,16 @@
 {
-	"$schema": "./node_modules/wrangler/config-schema.json",
-	"name": "santiorduno-showcase",
-	"compatibility_date": "2025-04-01",
-	"pages_build_output_dir": "./dist",
-	"d1_databases": [
-		{
-			"binding": "santiorduno_analytics",
-			"database_name": "santiorduno-analytics",
-			"database_id": "53c59c61-dca4-4249-998c-3e2727fe14e1",
-			"remote": true
-		}
-	]
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "santiorduno-showcase",
+  "compatibility_date": "2025-04-01",
+  "main": "worker/index.ts",
+  "assets": {
+    "directory": "./dist"
+  },
+  "d1_databases": [
+    {
+      "binding": "santiorduno_analytics",
+      "database_name": "santiorduno-analytics",
+      "database_id": "53c59c61-dca4-4249-998c-3e2727fe14e1"
+    }
+  ]
 }
