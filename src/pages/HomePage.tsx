@@ -8,9 +8,11 @@ import Projects from "../sections/Projects";
 import Education from "../sections/Education";
 import Contact from "../sections/Contact";
 import { useScrollDepth } from "../hooks/useScrollDepth";
+import { useVisitor } from "../hooks/useVisitor";
 
 const HomePage = () => {
   useScrollDepth({ pageName: 'home' });
+  useVisitor();
 
   return (
     <ReactLenis root className="relative w-screen min-h-screen">

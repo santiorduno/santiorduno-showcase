@@ -1,6 +1,7 @@
 interface Env {
   ASSETS: Fetcher;
   RESEND_API_KEY: string;
+  DB: D1Database;
 }
 
 const CORS_HEADERS = {
@@ -18,6 +19,32 @@ export default {
         { status: 'ok', hasKey: Boolean(env.RESEND_API_KEY) },
         { status: 200, headers: CORS_HEADERS }
       );
+    }
+
+    if (url.pathname === '/api/visitor' && request.method === 'POST') {
+      try {
+        const cf = request.cf as Record<string, string> | undefined;
+        const body = await request.json() as { path?: string; referrer?: string; device?: string };
+
+        await env.DB.prepare(`
+          INSERT INTO visitors (timestamp, country, city, timezone, org, path, referrer, device)
+          VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        `).bind(
+          new Date().toISOString(),
+          cf?.country ?? null,
+          cf?.city ?? null,
+          cf?.timezone ?? null,
+          cf?.asOrganization ?? null,
+          body.path ?? null,
+          body.referrer ?? null,
+          body.device ?? null,
+        ).run();
+
+        return Response.json({ ok: true }, { status: 200, headers: CORS_HEADERS });
+      } catch (err) {
+        const msg = err instanceof Error ? err.message : String(err);
+        return Response.json({ error: msg }, { status: 500, headers: CORS_HEADERS });
+      }
     }
 
     if (url.pathname.startsWith('/api/contact')) {
