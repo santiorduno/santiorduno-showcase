@@ -182,6 +182,19 @@ export const projects: Project[] = [
     ]
   },
   {
+    id: 5,
+    title: "Terrenates",
+    slug: "terrenates",
+    description: "Brand identity and two-product digital system for a five-generation conservation ranch in Chihuahua — institutional site and Artisan Butchery D2C landing.",
+    image: "/assets/projects/terrenates/thumbnail.png",
+    technologies: [
+      { id: 1, name: "Figma" },
+      { id: 2, name: "Design System" },
+      { id: 3, name: "Brand Identity" },
+      { id: 4, name: "Design Tokens" }
+    ]
+  },
+  {
     id: 2,
     title: "Santa Eventos",
     slug: "santa-eventos",
@@ -218,7 +231,7 @@ export const projects: Project[] = [
         name: "Vercel"
       },
       {
-        id: 4, 
+        id: 4,
         name: "Tailwind"
       },
       {
@@ -242,39 +255,6 @@ export const projects: Project[] = [
       id:2,
       name: "Frontend"
     }
-  ]
-  },
-  {
-    id: 5,
-    title: "This Website",
-    slug: "this-website",
-    description: "Custom web solution with focus on technical implementation and user experience.",
-    image: "/assets/projects/this-website/thumbnail.png",
-    technologies: [
-    {
-      id:1,
-      name: "React"
-    },
-    {
-      id:2,
-      name: "TypeScript"
-    },
-    {
-      id:3,
-      name: "Tailwind"
-    },
-    {
-      id:4,
-      name: "Gsap"
-    },
-    {
-      id:5,
-      name: "Supabase"
-    },
-    {
-      id:6,
-      name: "Resend JS"
-    },
   ]
   }
 ];

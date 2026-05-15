@@ -4,7 +4,7 @@ import { corporativoKino } from './corporativo-kino';
 import { santaEventos } from './santa-eventos';
 import { arteClean } from './arte-clean';
 import { neurop } from './neurop';
-import { thisWebsite } from './this-website';
+import { terrenates } from './terrenates';
 
 export const projectsContent: ProjectDetail[] = [
   lasRiberas,
@@ -12,7 +12,7 @@ export const projectsContent: ProjectDetail[] = [
   santaEventos,
   arteClean,
   neurop,
-  thisWebsite
+  terrenates
 ];
 
 // Helper function to get project by slug
